@@ -153,6 +153,8 @@ mindmaps.DefaultCanvasView = function() {
     });
   };
 
+  
+  
   /**
    * Enables dragging of the map with the mouse.
    */
