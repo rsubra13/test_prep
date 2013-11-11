@@ -429,7 +429,7 @@ mindmaps.DefaultCanvasView = function() {
 	
 	var $wiki = $("<a/>", {
 	id : "node-cap-" + node.id,
-	href : "http://localhost/webtester5/w/index.php/lucid",
+	href : "http://localhost/wiki/" + node.text.caption,
 	target : "_blank",
 	//"class" : "node-caption node-text-behaviour",
 	text : node.text.caption
