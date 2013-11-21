@@ -2,11 +2,11 @@
 // Place your mysql hostname here (usually localhost)
 define ("SQL_HOST","localhost");
 // Place your mysql username here
-define ("SQL_USER","root");
+define ("SQL_USER","admin");
 // Place your mysql password here
-define ("SQL_PASS","ramki");
+define ("SQL_PASS","admin");
 // Place your mysql database name here
-define ("SQL_DB","ramki_test");
+define ("SQL_DB","webtester1");
 // Place your database type here (mysql)
 define ("SQL_TYPE","mysql");
 ?>

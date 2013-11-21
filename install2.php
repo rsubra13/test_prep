@@ -13,7 +13,7 @@ include "./includes/nocache.php";
 ?>
 <title>TestPrep </title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link href="includes/wtstyle.css" rel="stylesheet"  type="text/css">
+<link href="includes/wtstyle_new.css" rel="stylesheet"  type="text/css">
 <script language="JavaScript" type="text/JavaScript">
 <!--
 function MM_preloadImages() { //v3.0
@@ -57,7 +57,8 @@ function checkIt(string)
 <div align="center"> 
   <table width="100%" height="50" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#333333" BORDERCOLORLIGHT="#999999" BORDERCOLORDARK="#333333">
     <tr> 
-      <td width="338" align="center" valign="top"><div align="left"><a href="./index.php"><img src="images/webtestertop.gif" width="337" height="75" border="0"></a></div></td>
+      <td width="338" align="center" valign="top"><div align="left"></div>
+      <a href="./index.php"><img src="images/webtester_new.gif" alt="TestPrep" width="337" height="75" border="0"></a></td>
       <td align="center" valign="middle">
         <p class="style3">Install</p>
       </td>
@@ -460,15 +461,18 @@ define (\"SQL_TYPE\",\"mysql\");
     </tr>
     <tr> 
       <td align="center" valign="top">
+        <p>&nbsp;</p>
+          <p>&nbsp;</p>
           <p><span class="style1 style5">Copyright &copy; 2003 - 2006 <a href="http://www.epplersoft.com">Eppler 
-        Software</a> Used for College Project</span></p>
+            Software</a> </span></p>
+          <p><span class="style1 style5">*Used for an academic Project*</span></p>
           <p><br>
             <font size="-2">Page created in
             <?php include "./includes/timerfoot.php" ?> seconds.</font> </p>
       </td>
     </tr>
   </table>
-</div>
+<a href="./index.php"></a></div>
 </body>
 </html>
 <?php ob_end_flush() ?>

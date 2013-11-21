@@ -13,13 +13,13 @@ include "./includes/validation.php";
 <html><!-- InstanceBegin template="/Templates/Test Layout.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
-<link href="includes/wtstyle.css" rel="stylesheet"  type="text/css">
+<link href="includes/style.css" rel="stylesheet"  type="text/css">
 <?php
 // Copyright (C) 2003 - 2007 Eppler Software.  All rights reserved.
 // Any redistribution or reproduction of any materials herein is strictly prohibited.
 ?>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>WebTester Online Testing</title>
+<title>WebTester - Modified version</title>
 <!-- InstanceEndEditable --> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
