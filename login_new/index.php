@@ -2,6 +2,15 @@
 <html>
 <head>
 
+<?php
+include "../includes/timerhead.php";
+include "../includes/conn.php";
+include "../includes/includes.php";
+include "../includes/nocache.php";
+include "../includes/validation.php";
+
+?>
+
 
 <!--META-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -37,19 +46,14 @@ $(document).ready(function() {
 <!--WRAPPER-->
 <div id="wrapper">
 
-	<!--SLIDE-IN ICONS-->
-    <div class="user-icon"></div>
-    <div class="pass-icon"></div>
-    <!--END SLIDE-IN ICONS-->
+	<!--SLIDE-IN ICONS--><!--END SLIDE-IN ICONS-->
 
 <!--LOGIN FORM-->
 <form name="login-form" class="login-form" action="" method="post">
 
 	<!--HEADER-->
     <div class="header">
-    <!--TITLE-->
-    <h1>GRE PREP</h1>
-    </div>
+    <!--TITLE--><img src="images/gre_prep.jpg" width="150" height="63"  alt=""/>    </div>
     <!--END HEADER-->
 	
 	<!--CONTENT-->
@@ -61,8 +65,9 @@ $(document).ready(function() {
     
     <!--FOOTER-->
     <div class="footer">
-    <!--LOGIN BUTTON--><input type="submit" name="submit" value="Login" class="button" /><!--END LOGIN BUTTON-->
-    <!--REGISTER BUTTON--><input type="submit" name="submit" value="Register" class="register" /><!--END REGISTER BUTTON-->
+    <!--LOGIN BUTTON--> 
+    <input type="submit" name="submit" value="Login" class="button" /><!--END LOGIN BUTTON-->
+    <!--REGISTER BUTTON--><input name="submit" type="submit" class="button" formaction="register.php" value="Register" /><a href="register.php"></a><!--END REGISTER BUTTON-->
     </div>
     <!--END FOOTER-->
 
@@ -72,20 +77,49 @@ $(document).ready(function() {
 </div>
 <!--END WRAPPER-->
 
-<!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+<!--GRADIENT-->
+<div class="gradient">s</div><!--END GRADIENT-->
+
+// <?php
+	  // if (IPSESSIONS) {
+	  	// $strSQL="SELECT * FROM Sessions WHERE IP='" . $ip . "'";
+	  // } else {
+	  	// $strSQL="SELECT * FROM Sessions WHERE ID='" . $sessID . "'";
+	  // }
+	  // // $strSQL="SELECT * From Sessions WHERE IP='" . $ip . "'";
+	  // $result=mysql_query($strSQL, $conn)
+	  	// or $myVar=true;
+	 
+	  // if (!isset($myVar)) {
+		  // $num_records=mysql_num_rows($result);
+		  // $row=mysql_fetch_array($result);
+		  // if ($num_records == 0) {
+	  		// $myVar = true;
+		  // } else {
+		  	// $myVar = false;
+		  // }
+	  // }
+
+// ?>
+
 
 
 // <?php
-// // #include "./includes/conn.php";
-// // #include "./includes/includes.php";
+ // #include "./includes/conn.php";
+ // #include "./includes/includes.php";
 
+	
+// ini_set('display_errors', 'On');
+// error_reporting(E_ALL);
 
 // session_start();
 // $usersSQL="SELECT * FROM Users WHERE Username='" . $_REQUEST['username'] . "'";
-// $myRsRes=mysql_query($usersSQL, $conn)
-	// or redirect_to("userLogin.php?id");
-// $myRs=mysql_fetch_assoc($myRsRes)
-	// or redirect_to("userLogin.php?iu");
+// // $myRsRes=mysql_query($usersSQL, $conn)
+	// // or redirect_to("../home_page/index.php");
+	// // //or redirect_to("userLogin.php?id");
+// // $myRs=mysql_fetch_assoc($myRsRes)
+	// // or redirect_to("../home_page/index.php");
+	// //or redirect_to("userLogin.php?id");
 // if (mysql_num_rows($myRsRes) != 0) {
 	// if ($myRs['Password']==md5($_REQUEST['password'])) {
 			// $_SESSION['loggedInTest']="1";
@@ -97,12 +131,14 @@ $(document).ready(function() {
 			// $_SESSION['limited']=$myRs['Limited'];
 			// $_SESSION['limitedsubjects']=$myRs['LimitedSubjects'];
 	// } else {
-		// redirect_to("userLogin.php?ip");
+		// //redirect_to("userLogin.php?ip");
+		 // redirect_to("../home_page/index.php");
+
 		// exit;
 	// }
 // }
 // // redirect_to("./login/rsubra1/Login_page/left/index.php");
-// // ?>
+ //?> // 
 
 </body>
 </html>

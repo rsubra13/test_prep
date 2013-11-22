@@ -40,7 +40,7 @@ $(document).ready(function() {
 	<!--SLIDE-IN ICONS--><!--END SLIDE-IN ICONS-->
 
 <!--LOGIN FORM-->
-<form name="login-form" class="login-form" action="" method="post">
+<form name="login-form" class="login-form" action="" method="post" height="400">
 
 	<div align="center">
 	  <!--HEADER-->
@@ -69,7 +69,9 @@ $(document).ready(function() {
       <div align="center">
         <!--LOGIN BUTTON-->
         <input type="submit" name="cancel" value="Cancel" class="register" id="cancel" /><!--END LOGIN BUTTON-->
-        <!--REGISTER BUTTON--><input type="submit" name="submit" value="Register" class="register" /><!--END REGISTER BUTTON-->
+        <!--REGISTER BUTTON-->
+        <a href="index.php" tabindex="1">LOGIN</a>
+        <input type="submit" name="submit" value="Register" class="register" /><!--END REGISTER BUTTON-->
       </div>
     </div>
     <div align="center"><!--END FOOTER-->

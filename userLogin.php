@@ -5,10 +5,6 @@ include "./includes/includes.php";
 include "./includes/nocache.php";
 include "./includes/validation.php";
 
-
-
-
-
 ?>
 <html><!-- InstanceBegin template="/Templates/Test Layout.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
