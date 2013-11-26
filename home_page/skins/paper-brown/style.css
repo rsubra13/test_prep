@@ -50,7 +50,9 @@ body {
 
 /* SIDEBAR CATEGORIES ---------------------------------------------------*/
 
-#sidebar .cat-list li{  }
+#sidebar .cat-list li{
+	color: #FFF;
+}
 
 #sidebar .cat-list a:hover{ color: #ecc731; }
 
@@ -75,5 +77,3 @@ body {
 #footer h6{	color: #fff; }
 
 #bottom-right:hover{ color: #dbc97f; }
-
-

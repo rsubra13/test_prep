@@ -37,17 +37,16 @@ body {
 	background: url(../images/bg.png) repeat;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
-	text-align: left;
 	text-decoration: none;
 	color: #F0F0F0;
 }
 
 #wrapper {
 	/* Center wrapper perfectly */
-	width: 561px;
-	height: 1565px;
+	width: 510px;
+	height: 1136px;
 	position: absolute;
-	left: 450px;
+	left: 501px;
 	top: 251px;
 	margin-left: -150px;
 	margin-top: -200px;
@@ -118,13 +117,14 @@ HEADER
 }
 
 .login-form .header h1 {
-	font-family: 'Bree Serif', serif;
-	font-weight: 300;
+	font-family: alex-brush;
+	font-weight: 400;
 	font-size: 28px;
-	line-height:34px;
+	line-height: 34px;
 	color: #414848;
 	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
 	margin-bottom: 10px;
+	font-style: normal;
 }
 
 .login-form .header span {

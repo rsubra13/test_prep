@@ -52,22 +52,40 @@ $(document).ready(function() {
 <form name="login-form" class="login-form" action="" method="post">
 
 	<!--HEADER-->
-    <div class="header">
-    <!--TITLE--><img src="images/gre_prep.jpg" width="150" height="63"  alt=""/>    </div>
+    <div class="header">    	
+      <p>&nbsp;</p>
+      <p><img src="images/gre_prep.jpg" width="150" height="63"  alt=""/></p>
+      <p>&nbsp;</p>
+    </div>
     <!--END HEADER-->
 	
 	<!--CONTENT-->
     <div class="content">
-	<!--USERNAME--><input name="username" type="text" class="input username" value="Username" onfocus="this.value=''" /><!--END USERNAME-->
-    <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
+	<p>	<span style="text-align: justify; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; color: #666;">UserName :  </span>
+	  <!--USERNAME-->
+	  <input name="username" type="text" required="required" class="input username" onfocus="this.value=''" value="Type your username here" maxlength="20" /><!--END USERNAME--></p>
+	<p>&nbsp;</p>
+	<p><span style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; color: #666;">Password : </span>	  <!--PASSWORD-->
+	    <input name="password" type="password" required="required" class="input password" onfocus="this.value=''" value="Password" />
+	  </p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #999;">(Password should be of minimum 5 digits with one number 0-9 in it)</p>
+	<!--END PASSWORD-->
     </div>
     <!--END CONTENT-->
     
     <!--FOOTER-->
     <div class="footer">
-    <!--LOGIN BUTTON--> 
-    <input type="submit" name="submit" value="Login" class="button" /><!--END LOGIN BUTTON-->
-    <!--REGISTER BUTTON--><input name="submit" type="submit" class="button" formaction="register.php" value="Register" /><a href="register.php"></a><!--END REGISTER BUTTON-->
+    <p>
+      <!--LOGIN BUTTON--> 
+      </p>
+    <p>
+      <input type="submit" name="submit" value="Login" class="button" />
+      <!--END LOGIN BUTTON-->
+      <!--REGISTER BUTTON--><input name="submit" type="submit" autofocus="autofocus" class="button" formaction="register.php" formmethod="GET" value="Register" />
+      <a href="register.php"></a></p>
+    <!--END REGISTER BUTTON-->
     </div>
     <!--END FOOTER-->
 

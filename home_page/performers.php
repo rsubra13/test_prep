@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 
-<?php
-include "../includes/conn.php";
-include "../includes/includes.php";
-$strsql = "SELECT * FROM `stellar_performers` ";
-#$result=mysql_query($strsql, $conn)
-#echo $strsql
-?>
+
+
 
 <html>
 <head>
@@ -156,6 +151,45 @@ $strsql = "SELECT * FROM `stellar_performers` ";
             <caption>
               Stellar Performers of Your Major
             </caption>
+            <?php
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+include "../includes/conn.php";
+include "../includes/includes.php";
+
+$strsql = "SELECT * FROM `stellar_performers` ";
+$result=mysql_query($strsql, $conn);
+#echo $result;
+
+
+#if($result){
+ # $data = mysql_fetch_array($result);
+ # print_r($data);
+  #echo $data['UNIV_NAME'];
+#}
+
+echo "<table border='1'>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>";
+
+
+while($row = mysqli_fetch_array($result))
+{
+	echo "<tr>";
+	echo "<td>" . $row['PERSON_NAME'] . "</td>";
+	echo "<td>" . $row['UNIV_NAME'] . "</td>";
+	echo "</tr>";
+}
+echo "</table>";
+
+mysqli_close($con);
+
+
+?>
             <tr>
               <th scope="row">&nbsp;</th>
               <td>&nbsp;</td>
@@ -225,3 +259,4 @@ $strsql = "SELECT * FROM `stellar_performers` ";
 <!-- ENDS FOOTER -->
 </body>
 </html>
+

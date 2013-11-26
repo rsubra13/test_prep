@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0058)http://localhost/testprep/test_prep/login_new/register.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<!--META-->
+
+<title>GRE PREP </title>
+
+<!--STYLESHEETS-->
+<link href="./GRE PREP_files/style1.css" rel="stylesheet" type="text/css">
+
+<!--SCRIPTS-->
+<script type="text/javascript" src="./GRE PREP_files/jquery.min.js"></script><style type="text/css"></style><style type="text/css"></style>
+<!--Slider-in icons-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".username").focus(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".username").blur(function() {
+		$(".user-icon").css("left","0px");
+	});
+	
+	$(".password").focus(function() {
+		$(".pass-icon").css("left","-48px");
+	});
+	$(".password").blur(function() {
+		$(".pass-icon").css("left","0px");
+	});
+});
+</script>
+
+</head>
+<body class="register">
+
+<!--WRAPPER-->
+<div id="wrapper">
+
+	<!--SLIDE-IN ICONS--><!--END SLIDE-IN ICONS-->
+
+<!--LOGIN FORM-->
+<form name="login-form" class="login-form" action="" method="post" height="800">
+
+	<div align="center">
+	  <!--HEADER-->
+    </div>
+	<div class="header"> <!--TITLE-->
+      <h1 align="center" class="register"><strong>User</strong> <strong>Registration</strong></h1>
+    </div>
+    <div align="center"><!--END HEADER-->
+      
+      <!--CONTENT-->
+    </div>
+    <div class="content">
+      <div align="right">
+        <!--USERNAME-->
+        <input name="username" type="text" class="input username" value="Username" onfocus="this.value=&#39;&#39;"><!--END USERNAME-->
+        <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=&#39;&#39;"><!--END PASSWORD-->
+        <!--retype PASSWORD--><input name="retype password" type="password" class="input password" value="retype Password" onfocus="this.value=&#39;&#39;"><!--END PASSWORD-->
+        <!--Major selected--><input name="text" type="text" class="input major" value="College major" onfocus="this.value=&#39;&#39;" id="text"><!--END PASSWORD-->
+      </div>
+    </div>
+    <div align="center"><!--END CONTENT-->
+      
+      <!--FOOTER-->
+    </div>
+    <div class="footer">
+      <div align="center">
+        <!--LOGIN BUTTON-->
+        <input type="submit" name="cancel" value="Cancel" class="register" id="cancel"><!--END LOGIN BUTTON-->
+        <!--REGISTER BUTTON-->
+        <a href="http://localhost/testprep/test_prep/login_new/index.php" tabindex="1">LOGIN</a>
+        <input type="submit" name="submit" value="Register" class="register"><!--END REGISTER BUTTON-->
+      </div>
+    </div>
+    <div align="center"><!--END FOOTER-->
+      
+    </div>
+</form>
+<!--END LOGIN FORM-->
+
+</div>
+<!--END WRAPPER-->
+
+<!--GRADIENT--><div class="gradient">
+  <canvas id="canvas"></canvas>
+</div><!--END GRADIENT-->
+
+
+// 
+
+</body></html>
