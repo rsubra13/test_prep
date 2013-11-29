@@ -181,13 +181,34 @@ include "../includes/includes.php";
                       echo '<td><center>'.$row['PERSON_NAME'].'</center></td>'; 
                       echo '<td><center>'.$row['PERSON_NAME'].'</center></td>';
                       echo '<td><center>'.$row['INPUT_ID'].'</center></td>';
-                      echo '</tr>';
+                      echo '</tr>'; 
                     $counter++; 
                     } 
 
           echo '</table>';  
 
 
+          echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
+                <th width="10%">USER NAME</th>
+                <th width="25%">USER_posts</th>
+                <th width="25%">UNIV_RANK</th>
+                </tr>';
+
+          $sql = "SELECT * FROM `phpbb_users` LIMIT 0, 30 ";
+          $result=mysql_query($sql, $conn);
+          
+                    while($row = mysql_fetch_array($result))
+                    {
+                      echo '<tr class="select">';
+                      echo '<td><center>'.$row['username'].'</center></td>';
+                      echo '<td><center>'.$row['userposts'].'</center></td>'; 
+                      echo '<td><center>'.$row['USER_RANK'].'</center></td>';
+                
+                      echo '</tr>'; 
+                   
+                    } 
+
+          echo '</table>';  
          ?>
           <p>&nbsp;</p>
           <p>&nbsp;</p>

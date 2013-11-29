@@ -49,7 +49,7 @@ $(document).ready(function() {
 	<!--SLIDE-IN ICONS--><!--END SLIDE-IN ICONS-->
 
 <!--LOGIN FORM-->
-<form name="login-form" class="login-form" action="" method="post">
+<form name="login-form" class="login-form" action="../login_new.php" method="post">
 
 	<!--HEADER-->
     <div class="header">    	
@@ -98,65 +98,9 @@ $(document).ready(function() {
 <!--GRADIENT-->
 <div class="gradient">s</div><!--END GRADIENT-->
 
-// <?php
-	  // if (IPSESSIONS) {
-	  	// $strSQL="SELECT * FROM Sessions WHERE IP='" . $ip . "'";
-	  // } else {
-	  	// $strSQL="SELECT * FROM Sessions WHERE ID='" . $sessID . "'";
-	  // }
-	  // // $strSQL="SELECT * From Sessions WHERE IP='" . $ip . "'";
-	  // $result=mysql_query($strSQL, $conn)
-	  	// or $myVar=true;
-	 
-	  // if (!isset($myVar)) {
-		  // $num_records=mysql_num_rows($result);
-		  // $row=mysql_fetch_array($result);
-		  // if ($num_records == 0) {
-	  		// $myVar = true;
-		  // } else {
-		  	// $myVar = false;
-		  // }
-	  // }
-
-// ?>
 
 
 
-// <?php
- // #include "./includes/conn.php";
- // #include "./includes/includes.php";
-
-	
-// ini_set('display_errors', 'On');
-// error_reporting(E_ALL);
-
-// session_start();
-// $usersSQL="SELECT * FROM Users WHERE Username='" . $_REQUEST['username'] . "'";
-// // $myRsRes=mysql_query($usersSQL, $conn)
-	// // or redirect_to("../home_page/index.php");
-	// // //or redirect_to("userLogin.php?id");
-// // $myRs=mysql_fetch_assoc($myRsRes)
-	// // or redirect_to("../home_page/index.php");
-	// //or redirect_to("userLogin.php?id");
-// if (mysql_num_rows($myRsRes) != 0) {
-	// if ($myRs['Password']==md5($_REQUEST['password'])) {
-			// $_SESSION['loggedInTest']="1";
-			// $_SESSION['username']=$myRs['Username'];
-			// $_SESSION['password']=$myRs['Password'];
-			// $_SESSION['firstname']=$myRs['FirstName'];
-			// $_SESSION['lastname']=$myRs['LastName'];
-			// $_SESSION['userID']=$myRs['ID'];
-			// $_SESSION['limited']=$myRs['Limited'];
-			// $_SESSION['limitedsubjects']=$myRs['LimitedSubjects'];
-	// } else {
-		// //redirect_to("userLogin.php?ip");
-		 // redirect_to("../home_page/index.php");
-
-		// exit;
-	// }
-// }
-// // redirect_to("./login/rsubra1/Login_page/left/index.php");
- //?> // 
 
 </body>
 </html>
