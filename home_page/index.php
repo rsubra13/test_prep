@@ -75,11 +75,6 @@
       <li><a href="template.php">GRE</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
-          <li><a href="features-typography.html">Typography</a>
-          <li><a href="features-icons.html">General icons</a>
-          <li><a href="features-social-icons.html">Social icons</a>
-          <li><a href="features-accordion.html">Accordion boxes</a>
-          <li><a href="features-toggle.html">Toggle boxes</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
@@ -164,58 +159,16 @@
         <!-- TABS -->
         <!-- the tabs -->
         <ul class="tabs">
-          <li><a href="#">Information</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Recent videos</a></li>
-          <li><a href="#">TOPPERS </a></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
         <!-- tab "panes" -->
         <div class="panes">
           <!-- Information  -->
-          <div>
-            <p class="info-box"> <img src="img/mono-icons/smile32.png" alt="" class="alignleft"> Test</p>
-            <p class="info-box"> <img src="img/mono-icons/boxdownload32.png" alt="" class="alignleft">Test </p>
-            <p class="info-box"> <img src="img/mono-icons/risegraph32.png" alt="" class="alignleft"> Test </p>
-            <p class="info-box"> <img src="img/mono-icons/camera32.png" alt="" class="alignleft"> Test </p>
-          </div>
-          <!-- ENDS Information -->
-          <!-- Post list -->
-          <div>
-            <ul class="blocks-list">
-              <li> <a href="single.html" class="border"><img src="img/dummies/114x86.jpg" alt=""></a>
-                <div class="the-excerpt"> <strong> Test Text <a href="single.html" class="link-arrow">Read more &#8594;</a> </div>
-              </li>
-              <li> <a href="single.html" class="border"><img src="img/dummies/114x86.jpg" alt=""></a>
-                <div class="the-excerpt"> <strong>Test Text <a href="single.html" class="link-arrow">Read more &#8594;</a> </div>
-              </li>
-              <li> <a href="single.html" class="border"><img src="img/dummies/114x86.jpg" alt=""></a>
-                <div class="the-excerpt"> <strong>Test Text <a href="single.html" class="link-arrow">Read more &#8594;</a> </div>
-              </li>
-            </ul>
-          </div>
-          <!-- ENDS Post list -->
-          <!-- img gallery -->
-          <div>
-            <ul class="blocks-gallery">
-              <li><a class="border" href="#" rel="prettyPhoto"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a class="border" href="#" rel="prettyPhoto"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a class="border" href="#" rel="prettyPhoto"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a class="border" href="#" rel="prettyPhoto"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-             
-            </ul>
-          </div>
-          <!-- ENDS img gallery -->
-          <!-- img gallery -->
-          <div>
-            <ul class="blocks-gallery">
-              <li><a href="img/dummies/584x300.jpg" class="border fancybox"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a href="img/dummies/584x300.jpg" class="border fancybox"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a href="img/dummies/584x300.jpg" class="border fancybox"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              <li><a href="img/dummies/584x300.jpg" class="border fancybox"><img src="img/dummies/114x86.jpg" alt=""></a></li>
-              
-            </ul>
-          </div>
-          <!-- ENDS img gallery -->
+ 
+         
         </div>
         <!-- ENDS TABS -->
       </div>

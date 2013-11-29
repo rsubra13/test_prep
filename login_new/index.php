@@ -43,6 +43,28 @@ $(document).ready(function() {
 </head>
 <body>
 
+	<?php
+	  if (IPSESSIONS) {
+	  	$strSQL="SELECT * FROM Sessions WHERE IP='" . $ip . "'";
+	  } else {
+	  	$strSQL="SELECT * FROM Sessions WHERE ID='" . $sessID . "'";
+	  }
+
+	  $result=mysql_query($strSQL, $conn)
+	  	or $myVar=true;
+	 
+	  if (!isset($myVar)) {
+		  $num_records=mysql_num_rows($result);
+		  $row=mysql_fetch_array($result);
+		  if ($num_records == 0) {
+	  		$myVar = true;
+		  } else {
+		  	$myVar = false;
+		  }
+	  }
+
+?>
+
 <!--WRAPPER-->
 <div id="wrapper">
 
@@ -63,13 +85,15 @@ $(document).ready(function() {
     <div class="content">
 	<p>	<span style="text-align: justify; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; color: #666;">UserName :  </span>
 	  <!--USERNAME-->
-	  <input name="username" type="text" required="required" class="input username" onfocus="this.value=''" value="Type your username here" maxlength="20" /><!--END USERNAME--></p>
+	  <input name="username" type="text"  class="input username" onfocus="this.value=''" value="username" maxlength="20" /><!--END USERNAME--></p>
 	<p>&nbsp;</p>
+
 	<p><span style="font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif; color: #666;">Password : </span>	  <!--PASSWORD-->
-	    <input name="password" type="password" required="required" class="input password" onfocus="this.value=''" value="Password" />
+	    <input name="password" type="password" class="input password" onfocus="this.value=''" value="password" />
 	  </p>
 	<p>&nbsp;</p>
 	<p>&nbsp;</p>
+
 	<p style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #999;">(Password should be of minimum 5 digits with one number 0-9 in it)</p>
 	<!--END PASSWORD-->
     </div>

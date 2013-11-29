@@ -1,7 +1,7 @@
 
 html>
 <head>
-<title>My first PHP page</title>
+<title>Login</title>
 
 <style type="text/css">
 body {background-color:#b0c4de;}
@@ -11,6 +11,7 @@ body {background-color:#b0c4de;}
 </head>
 <body>
 
+<a href="./login_new/index.php" style="color: #003399" tabindex="1">Return to Login Page</a><!--END REGISTER BUTTON-->
 
 <?php
 include "./includes/conn.php";
@@ -20,9 +21,9 @@ include "./includes/includes.php";
 session_start();
 $usersSQL="SELECT * FROM Users WHERE Username='" . $_REQUEST['username'] . "'";
 $myRsRes=mysql_query($usersSQL, $conn)
-	or redirect_to("./login_new/asd.php");
-$myRs=mysql_fetch_assoc($myRsRes)
-	or redirect_to("./login_new/asd.php");
+	or redirect_to("./login_new/alert.php");
+$myRs=mysql_fetch_assoc($myRsRes);
+	#or redirect_to("./login_new/index.php");
 if (mysql_num_rows($myRsRes) != 0) 
 {
 	if ($myRs['Password']==md5($_REQUEST['password'])) 
@@ -35,17 +36,23 @@ if (mysql_num_rows($myRsRes) != 0)
 			$_SESSION['userID']=$myRs['ID'];
 			$_SESSION['limited']=$myRs['Limited'];
 			$_SESSION['limitedsubjects']=$myRs['LimitedSubjects'];
+
+			echo "Final: Failed please try again";
+			redirect_to("./home_page/index.php");
 	} else 
 	{
 		echo "Login Failed please try again";
-		redirect_to("./home_page/index.php");
 		exit;
 	}
 }
 
+else 
+{
+		echo '<script type="text/javascript">alert(\'Wrong username or password\')</script>';
+		exit;
+}
 
-echo "Final: Failed please try again";
-redirect_to("./home_page/index.php");
+
 
 ?>
 
