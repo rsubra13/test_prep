@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <script src="http://static.opentok.com/webrtc/v2.0/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
+        <link href="/css/demos.css" type="text/css" rel="stylesheet" >
+        <script type="text/javascript" charset="utf-8">
+            TB.addEventListener("exception", exceptionHandler);
+            var session = TB.initSession("2_MX40NDQ4NTc1Mn5-VGh1IE5vdiAyOCAxNTozOTozMiBQU1QgMjAxM34wLjUwMTMyOTh-"); // Replace with your own session ID. See https://dashboard.tokbox.com/projects
+            TB.setLogLevel(TB.DEBUG);
+            session.addEventListener("sessionConnected", sessionConnectedHandler);
+            session.addEventListener("streamCreated", streamCreatedHandler);
+            session.connect("44485752", "T1==cGFydG5lcl9pZD00NDQ4NTc1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz0xM2M1ODIxNTE3ZjhkMjgyYzI5NThjY2VhZGFkZGY3MmI3YjNmZjE2OnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDQwTkRRNE5UYzFNbjUtVkdoMUlFNXZkaUF5T0NBeE5Ub3pPVG96TWlCUVUxUWdNakF4TTM0d0xqVXdNVE15T1RoLSZjcmVhdGVfdGltZT0xMzg1NjgxOTk5Jm5vbmNlPTAuMTE2ODM2MTk3ODc2NTE0NTYmZXhwaXJlX3RpbWU9MTM4ODI3Mzk5MCZjb25uZWN0aW9uX2RhdGE9"); // Replace with your API key and token. See https://dashboard.tokbox.com/projects
+
+            function sessionConnectedHandler(event) {
+                 console.log("connected");
+                 subscribeToStreams(event.streams);
+                 session.publish();
+            }
+
+            function streamCreatedHandler(event) {
+                console.log("created");
+                subscribeToStreams(event.streams);
+            }
+
+            function subscribeToStreams(streams) {
+                for (var i = 0; i < streams.length; i++) {
+                    var stream = streams[i];
+                    if (stream.connection.connectionId != session.connection.connectionId) {
+                        session.subscribe(stream);
+                    }
+                }
+            }
+
+            function exceptionHandler(event) {
+                alert(event.message);
+            }
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
