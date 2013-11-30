@@ -1,19 +1,5 @@
-<!DOCTYPE html>
+<?php session_start(); ?>
 
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
-
-include "../includes/conn.php";
-include "../includes/includes.php";
-
-?>
-
-<html>
-<head>
-<title>GRE PREP</title>
-<meta charset="utf-8">
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen">
@@ -80,17 +66,22 @@ include "../includes/includes.php";
       </div>
     </form>
     <!-- ENDS search -->
-       <!-- Navigation -->
+    <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
-      <li class="current-menu-item"><a href="template.php">HOME</a></li>
-      <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
+      <li class="current-menu-item"><a href="index.html">HOME</a></li>
+      <li><a href="features.html">GRE</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
+          <li><a href="features-typography.html">Typography</a>
+          <li><a href="features-icons.html">General icons</a>
+          <li><a href="features-social-icons.html">Social icons</a>
+          <li><a href="features-accordion.html">Accordion boxes</a>
+          <li><a href="features-toggle.html">Toggle boxes</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">MIND MAPS</a></li>
-      <li><a href="statistics.php">USER STATISTICS</a>
+      <li><a href="skins.html">PLANS</a></li>
+      <li><a href="gallery.html">PERSONAL NOTES</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>
             <ul>
@@ -107,10 +98,10 @@ include "../includes/includes.php";
           <li><a href="blog-compact.html">Compact blog</a></li>
         </ul>
       </li>
-      <li><a href="../phpBB/ucp.php?mode=login">DISCUSSION FORUM</a>
+      <li><a href="portfolio.html">DISCUSSION FORUM</a>
  
       </li>
-      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="show_message.php">CONTACT</a></li>
     </ul>
     <!-- Navigation -->
     <!-- categories -->
@@ -139,101 +130,22 @@ include "../includes/includes.php";
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
    
-    <!-- CONTENT -->
-    <div id="content">
-      <!-- PAGE CONTENT -->
-      <div id="page-content">
-        <!-- feature blocks -->
-        <h1 class="header-line"><!-- ENDS feature blocks -->
-        <!-- TABS --></h1>
-        <form id="form1" name="form1" method="post">
-          <p>Welcome User ! </p>
-          <p><strong style="color: #09C"> Your Subject area is :
-            </strong>
-            <input type="text" name="textfield" id="textfield">
-          </p>
-                  <p><strong><span style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-style: oblique; color: #03C;">Your current GRE Score Range: </span> </strong>
-                    <input type="text" name="textfield" id="textfield">
-          </p>
+<?php
+include "./includes/conn.php";
+include "./includes/includes.php";
+$id=$_GET['id'];
+$usersSQL="SELECT * FROM users where ID=".$id;
+echo $_SESSION['ID'];
+$myRsRes=mysql_query($usersSQL, $conn);
+$row = mysql_fetch_array($myRsRes);
+echo "<html>";
+echo "<body><lable>user name:-<lable> ".$row['Username']."<br>";
+echo "<lable>first name:-<lable> ".$row['FirstName']."<br>";
+echo "<lable>last name:-<lable> ".$row['LastName']."<br>";
 
-          <?php
-          
 
-          echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                <th width="10%">ID</th>
-                <th width="25%">NAME</th>
-                <th width="25%">UNIV_NAME</th>
-                <th width="25%">UNIQUE_ID</th>
-                </tr>';
+echo "<form action='add_mentor.php' method='get'><input type='hidden' name='id'value='".$row[ID]."'><textarea name='comment'>hi nice to meet you!!</textarea> <input type='submit'> </form> </body></html>";
 
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
-          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
-          $result=mysql_query($strsql, $conn);
-          
-                    while($row = mysql_fetch_array($result))
-                    {
-                      echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
-                      echo '</tr>'; 
-                    $counter++; 
-                    } 
 
-          echo '</table>';  
- 
-         ?>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </form>
-          
-      </div>
-        <!-- ENDS TABS -->
-      </div>
-      <!-- ENDS PAGE-CONTENT -->
-    </div>
-    <!-- ENDS CONTENT -->
-  </div>
-  <!-- ENDS MAIN -->
-</div>
-<!-- ENDS WRAPPER -->
-<!-- FOOTER -->
-<div id="footer">
-  <!-- FOOTER-WRAPPER -->
-  <div id="footer-wrapper">
-    <!-- footer-cols -->
-    <ul id="footer-cols">
-      <li class="col clear-col">
-        <h6>About EasyGRE</h6>
-       need to write something here. </li>
-      <li class="col">
-        <h6>Categories</h6>
-        <ul>
-          <li><a href="#">GRE Math</a></li>
-          <li><a href="#">GRE Verbal</a></li>
-          <li>GRE Analytical</li>
-          <li><a href="#">Math Refreshers</a></li>
-          <li>Vocabulary Refreshers</li>
-        </ul>
-      </li>
-      <!-- Flickr --><!-- ENDS Flickr -->
-    </ul>
-    <!-- ENDS footer-cols -->
-    <!-- footer-bottom -->
-    <div id="footer-bottom">
-      <div id="bottom-left">&copy; Copyright 2013 GRE PREP Pvt Ltd.<a target="_blank" href="http://www.luiszuno.com"></a></div>
-      <div id="bottom-right">To top</div>
-    </div>
-    <!-- ENDS footer-bottom -->
-  </div>
-  <!-- ENDS FOOTER-WRAPPER -->
-</div>
-<!-- ENDS FOOTER -->
+?>
 </body>
-</html>

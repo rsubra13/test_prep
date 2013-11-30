@@ -73,22 +73,17 @@
       </div>
     </form>
     <!-- ENDS search -->
-    <!-- Navigation -->
+      <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
-      <li class="current-menu-item"><a href="index.html">HOME</a></li>
-      <li><a href="features.html">GRE</a>
+      <li class="current-menu-item"><a href="template.php">HOME</a></li>
+      <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
-          <li><a href="features-typography.html">Typography</a>
-          <li><a href="features-icons.html">General icons</a>
-          <li><a href="features-social-icons.html">Social icons</a>
-          <li><a href="features-accordion.html">Accordion boxes</a>
-          <li><a href="features-toggle.html">Toggle boxes</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">PLANS</a></li>
-      <li><a href="gallery.html">PERSONAL NOTES</a>
+      <li><a href="skins.html">MIND MAPS</a></li>
+      <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>
             <ul>
@@ -105,7 +100,7 @@
           <li><a href="blog-compact.html">Compact blog</a></li>
         </ul>
       </li>
-      <li><a href="portfolio.html">DISCUSSION FORUM</a>
+      <li><a href="../phpBB/ucp.php?mode=login">DISCUSSION FORUM</a>
  
       </li>
       <li><a href="contact.html">CONTACT</a></li>

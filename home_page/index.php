@@ -72,14 +72,14 @@
     <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
       <li class="current-menu-item"><a href="template.php">HOME</a></li>
-      <li><a href="template.php">GRE</a>
+      <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">PLANS</a></li>
-      <li><a href="gallery.html">PERSONAL NOTES</a>
+      <li><a href="skins.html">MIND MAPS</a></li>
+      <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>
             <ul>
@@ -90,22 +90,23 @@
           <li><a href="gallery-video.html">Video gallery</a></li>
         </ul>
       </li>
-      <li><a href="blog.html">BLOG</a>
+      <li><a href="blog.html">TESTS</a>
         <ul>
           <li><a href="blog.html">Full blog</a></li>
           <li><a href="blog-compact.html">Compact blog</a></li>
         </ul>
       </li>
-      <li><a href="../phpBB/ucp.php?mode=login">DISCUSSION FORUM</a>
- 
-      </li>
-      <li><a href="contact.html">CONTACT</a></li>
+      <!--<li><a href="../phpBB/ucp.php?mode=login">DISCUSSION FORUM</a> <!-->
+      <li><a href="discussion.php">DISCUSSION FORUM</a>
+  
+       </li>
+      <li><a href="contact.html">MESSAGES</a></li>
     </ul>
     <!-- Navigation -->
     <!-- categories -->
     <ul class="cat-list">
       <li>
-        <h6>User Statistics</h6>
+        <h6 class="awesome"><a href="statistics.php">User Statistics</a></h6>
       </li>
       
      
@@ -116,7 +117,7 @@
     <ul class="social">
       <li>
         <h6>Follow us</h6>
-      <li><a href="www.facebook.com" class="facebook" title="Become a fan"></a></li>
+      <li><a href="#" class="facebook" title="Become a fan"></a></li>
       <li><a href="#" class="twitter" title="Follow our tweets"></a></li>
 
       <li><a href="#" class="youtube" title="View our videos"></a></li>
@@ -126,7 +127,7 @@
   <!-- ENDS SIDEBAR -->
   <!-- MAIN -->
   <div align="center" id="main">
-    <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
+    <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score More!</div>
     <!-- Slider -->
     <div id="slider"> <a href="#"><img src="images/1.png" alt=""></a> <a href="#"><img src="images/2.png" alt=""></a> <a href="#"><img src="images/3.png" alt=""></a> </div>
     <!-- ENDS Slider -->
@@ -135,43 +136,28 @@
       <!-- PAGE CONTENT -->
       <div id="page-content">
         <!-- feature blocks -->
-        <h1 class="header-line">Fascinating Features</h1>
+        <h1 class="header-line"><strong style="color: #02C">Fascinating Features</h1>
         <ul  class="feature-blocks" >
           <li>
-            <div class="block"> <a href="single.html" ><img class="cover" src="img/dummies/272x250.jpg" alt=""></a> </div>
-            <div class="the-excerpt"><strong>Learn with Mind Maps</strong></div>
-            <a href="single.html"  class="link-button"><span>Click Here to know more</span></a> </li>
+            <div class="block"> <strong style="color: #09C"> <a href="single.html" ><img src="img/dummies/272x250.jpg" alt="" width="272" height="250" class="cover"></a> </div>
+            <div class="the-excerpt"><strong><strong style="color: #92C">Learn with Mind Maps</strong></div>
+            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
           <li>
-            <div class="block"> <a href="performers.php" ><img class="cover" src="img/dummies/272x250b.jpg" alt=""></a> </div>
-            <div class="the-excerpt"> <strong>Free Educational Trip Contest!! </strong></div>
-           <a href="performers.php"  class="link-button"><span>Click Here to know more</span></a> </li>
+            <div class="block"> <a href="contest.php" ><img src="img/dummies/race.jpg" alt="" width="270" height="252" class="cover"></a> </div>
+            <div class="the-excerpt"><strong style="color: #92C">Free Educational Trip Contest!! </strong></div>
+           <a href="contest.php"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
           <li>
 		    <div class="block"> <a href="single.html" ><img class="cover" src="img/dummies/272x250c.jpg" alt=""></a> </div>
-            <div class="the-excerpt"> <strong>Stuck at something? Need a Mentor? </strong> </div>
-            <a href="single.html"  class="link-button"><span>Click Here to know more</span></a> </li>
+            <div class="the-excerpt"> <strong><strong style="color: #92C">Stuck at something? Need a Mentor? </strong> </div>
+            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
           <li>
             <div class="block"> <a href="single.html" ><img class="cover" src="img/dummies/272x250d.jpg" alt=""></a> </div>
-            <div class="the-excerpt"> <strong>Group Tests?An exciting experience </strong></div>
-            <a href="single.html"  class="link-button"><span>Click Here to know more</span></a> </li>
+            <div class="the-excerpt"> <strong><strong style="color: #92C">Group Tests?An exciting experience </strong></div>
+            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
         
         </ul>
         <!-- ENDS feature blocks -->
-        <!-- TABS -->
-        <!-- the tabs -->
-        <ul class="tabs">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <!-- tab "panes" -->
-        <div class="panes">
-          <!-- Information  -->
- 
-         
-        </div>
-        <!-- ENDS TABS -->
-      </div>
+          </div>
       <!-- ENDS PAGE-CONTENT -->
     </div>
     <!-- ENDS CONTENT -->

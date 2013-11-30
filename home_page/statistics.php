@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-
-<?php
+<html>
+<head>
+  <?php
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
@@ -8,11 +9,33 @@ ini_set('display_startup_errors', TRUE);
 include "../includes/conn.php";
 include "../includes/includes.php";
 
+define('IN_PHPBB', true);
+$phpbb_root_path = '../phpBB/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+require($phpbb_root_path . 'common.' . $phpEx);
+require($phpbb_root_path . 'includes/functions_user.' . $phpEx);
+require($phpbb_root_path . 'includes/functions_module.' . $phpEx);
+
+// Basic parameter data
+$id   = request_var('i', '');
+$mode = request_var('mode', '');
+
+if (in_array($mode, array('login', 'logout', 'confirm', 'sendpassword', 'activate')))
+{
+  define('IN_LOGIN', true);
+}
+
+// Start session management
+$u = $user->session_begin();
+echo $u;
+$a=$auth->acl($user->data);
+$user->setup('ucp');
+// Setting a variable to let the style designer know where he is...
+$template->assign_var('S_IN_UCP', true);
+
 ?>
 
-<html>
-<head>
-<title>GRE PREP</title>
+<title>Free Educational Trip</title>
 <meta charset="utf-8">
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
@@ -80,7 +103,7 @@ include "../includes/includes.php";
       </div>
     </form>
     <!-- ENDS search -->
-       <!-- Navigation -->
+     <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
       <li class="current-menu-item"><a href="template.php">HOME</a></li>
       <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
@@ -114,13 +137,14 @@ include "../includes/includes.php";
     </ul>
     <!-- Navigation -->
     <!-- categories -->
-    <ul class="cat-list">
-      <li>
-        <h6>User Statistics</h6>
+    
+    <li>
+      <ul class="cat-list">
+        <li> 
       </li>
       
      
-    </ul>
+  </ul>
     <!-- categories -->
    
     <!-- Social -->
@@ -138,67 +162,39 @@ include "../includes/includes.php";
   <!-- MAIN -->
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
-   
-    <!-- CONTENT -->
-    <div id="content">
-      <!-- PAGE CONTENT -->
-      <div id="page-content">
-        <!-- feature blocks -->
-        <h1 class="header-line"><!-- ENDS feature blocks -->
-        <!-- TABS --></h1>
-        <form id="form1" name="form1" method="post">
-          <p>Welcome User ! </p>
-          <p><strong style="color: #09C"> Your Subject area is :
-            </strong>
-            <input type="text" name="textfield" id="textfield">
-          </p>
-                  <p><strong><span style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-style: oblique; color: #03C;">Your current GRE Score Range: </span> </strong>
-                    <input type="text" name="textfield" id="textfield">
-          </p>
+
+
 
           <?php
-          
-
           echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                <th width="10%">ID</th>
-                <th width="25%">NAME</th>
-                <th width="25%">UNIV_NAME</th>
-                <th width="25%">UNIQUE_ID</th>
+                <th width="20%">User Name</th>
+                <th width="10%">Posts Count </th>
+                <th width="15%">User Rank </th>
                 </tr>';
 
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
-          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
-          $result=mysql_query($strsql, $conn);
-          
+          $sql = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.`username` = 'ramki' LIMIT 1";
+          $result=mysql_query($sql, $conn);
+          $u= $user->data['user_id'];
+          echo $u;
                     while($row = mysql_fetch_array($result))
                     {
-                      echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
+                      echo '<td><center><strong style="color: #02C">'.$row['username'].'</center></td>';
+                      echo '<td><center><strong style="color: #02C">'.$row['user_posts'].'</center></td>'; 
+                      echo '<td><center><strong style="color: #02C">'.$row['user_rank'].'</center></td>';
+                
                       echo '</tr>'; 
-                    $counter++; 
+                   
                     } 
 
-          echo '</table>';  
- 
-         ?>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </form>
-          
-      </div>
-        <!-- ENDS TABS -->
-      </div>
-      <!-- ENDS PAGE-CONTENT -->
-    </div>
-    <!-- ENDS CONTENT -->
+          echo '</table>'; 
+          $uname = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.`user_id` = 'ramki' LIMIT 1";
+          $posts = "SELECT * FROM `phpbb_posts` where `poster_id`= 48 LIMIT 0, 30 ";  
+            
+
+
+          ?>
+
+    <!-- CONTENT --><!-- ENDS CONTENT -->
   </div>
   <!-- ENDS MAIN -->
 </div>

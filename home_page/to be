@@ -1,1 +1,586 @@
-Universities should be listed wrt to 
+Universities should be listed wrt to the input and table
+
+table:
+
+1.GRE Marks 
+2.Breadth
+3.subject
+4.University
+
+if gre marks >320 && breadth== Engineering &Subj= comp science
+give 10 univs
+
+if gre marks >310 < 320 && comp science
+give 10 univs
+
+
+Engineering
+
+Computer Science & Information Systems
+Chemical Engineering
+CiviI & Structural Engineering
+Electrical & Electronic Engineering
+Mechanical, Aeronautical & Manufacturing Engineering
+
+
+Arts
+
+Philosophy
+Modern Languages
+Geography
+History
+Linguistics
+English Language & Literature
+
+
+Social Sciences
+
+Statistics & Operational Research
+Sociology
+Politics & International Studies
+Law
+Economics & Econometrics
+Accounting & Finance
+Communication & Media Studies
+Education
+
+
+
+Natural Sciences
+
+Physics & Astronomy
+Mathematics
+Environmental Sciences
+Earth & Marine Sciences
+Chemistry
+Materials Sciences
+
+
+Life Sciences & Medicine
+
+Medicine
+Biological Sciences
+Psychology
+Pharmacy & Pharmacology
+Agriculture & Forestry
+
+
+
+CS
+
+1	
+Massachusetts Institute of Technology (MIT)
+United States
+96.70
+2	
+Stanford University
+United States
+92.10
+3	
+University of Oxford
+United Kingdom
+92.00
+4	
+Carnegie Mellon University
+United States
+90.50
+5	
+University of Cambridge
+United Kingdom
+89.80
+6	
+Harvard University
+United States
+88.40
+7	
+University of California, Berkeley (UCB)
+United States
+88.00
+8	
+National University of Singapore (NUS)
+Singapore
+87.20
+9	
+ETH Zurich (Swiss Federal Institute of Technology)
+Switzerland
+87.10
+10	
+University of Hong Kong
+Hong Kong
+84.00
+11	
+Princeton University
+United States
+83.70
+12	
+The Hong Kong University of Science and Technology
+Hong Kong
+83.60
+13	
+The University of Melbourne
+Australia
+83.40
+14	
+University of California, Los Angeles (UCLA)
+United States
+82.10
+15	
+University of Edinburgh
+United Kingdom
+81.50
+16	
+University of Toronto
+Canada
+81.00
+17	
+Ecole Polytechnique Fédérale de Lausanne
+Switzerland
+80.20
+18	
+Imperial College London
+United Kingdom
+79.70
+19	
+The Chinese University of Hong Kong
+Hong Kong
+79.50
+20	
+The University of Tokyo
+Japan
+79.40
+21	
+Australian National University
+Australia
+78.90
+22	
+Nanyang Technological University (NTU)
+Singapore
+78.50
+23	
+UCL (University College London)
+United Kingdom
+78.00
+24	
+The University of Sydney
+Australia
+77.90
+25	
+The University of Queensland
+Australia
+77.80
+26	
+Cornell University
+United States
+77.60
+27=	
+Tsinghua University
+China
+77.50
+27=	
+University of Waterloo
+Canada
+77.50
+29	
+The University of New South Wales
+Australia
+77.30
+30	
+The University of Manchester
+United Kingdom
+77.10
+31	
+University of Texas at Austin
+United States
+76.80
+32=	
+University of Illinois at Urbana-Champaign
+United States
+76.60
+32=	
+University of Washington
+United States
+76.60
+34	
+Yale University
+United States
+76.20
+35=	
+Peking University
+China
+75.80
+35=	
+University of Amsterdam
+Netherlands
+75.80
+35=	
+University of British Columbia
+Canada
+75.80
+38	
+The University of Auckland
+New Zealand
+75.60
+39	
+Columbia University
+United States
+74.90
+40=	
+KAIST - Korea Advanced Institute of Science & Technology
+South Korea
+74.60
+40=	
+Karlsruhe Institute of Technology (KIT)
+Germany
+74.60
+40=	
+Technische Universität München
+Germany
+74.60
+40=	
+University of Chicago
+United States
+74.60
+44	
+Georgia Institute of Technology
+United States
+74.50
+45	
+Monash University
+Australia
+74.40
+46	
+California Institute of Technology (Caltech)
+United States
+74.20
+47	
+Politecnico di Milano
+Italy
+73.80
+48	
+University of Pennsylvania
+United States
+73.40
+49=	
+New York University (NYU)
+United States
+73.20
+49=	
+The Hong Kong Polytechnic University
+Hong Kong
+73.20
+
+
+>320
+
+University of Delaware	www.udel.edu
+University of California – Davis	www.ucdavis.edu
+University of Colorado –Boulder	www.colorado.edu
+University of Notre Dame	www.nd.edu
+University of Chicago	www.uchicago.edu
+Lehigh University (PA)	www.lehigh.edu
+University of Southern California	www.usc.edu
+Rensselaer Polytechnic Institute (NY)	www.rpi.edu
+University of Cincinnati	www.uc.edu
+University of Florida; Gainesville	www.ufl.edu
+Washington University St Louis	www.wustl.edu
+Vanderbilt University (TN)	www.vanderbilt.edu
+University of California - Irvine	www.uci.edu
+Michigan State University	www.msu.edu
+University of Massachusetts – Amherst	www.umass.edu
+Kansas State University	www.ksu.edu
+University of Alabama- Tuscaloosa	www.ua.edu
+University of Arizona-Tucson	www.uarizona.edu
+University of North Carolina- Chapel Hill	www.unc.edu
+Colorado School of Mines	www.mines.edu
+University of Illinois at Chicago	www.uic.edu
+University of New Hampshire
+
+
+>314
+
+US Universities for GRE Score Range 315, 316, 317, 318, 319, 320
+
+University of Missouri – Rolla	www.umr.edu
+University of Nebraska Lincoln	www.unl.edu
+University of Connecticut	www.uconn.edu
+University of Utah	www.utah.edu
+University of Tennessee-Knoxville	www.utk.edu
+West Virginia University	www.wvu.edu
+University of Kansas	www.ku.edu
+SUNY- stony brook	www.sunnysb.edu
+University of Georgia	www.uga.edu
+University of Missouri-Columbia	www.mizzou.edu
+Oklahoma State University	www.okstate.edu
+Louisiana State University-Baton Rouge	www.lsu.edu
+University of South Carolina	www.sc.edu
+Tulane University	www.tulane.edu
+Indiana University - Bloomington	www.indiana.edu
+University of Oklahoma	www.ou.edu
+University of Miami	www.miami.edu
+University of Texas – Dallas	www.utdallas.edu
+Ohio University –Athens	www.ohiou.edu
+University of Houston –Houston	www.uh.edu
+Michigan technological University	www.mtu.edu
+University of Maine	www.umaine.edu
+University of Kentucky	www.uky.edu
+George Washington University	www.gwu.edu
+University of Central Florida	www.ucf.edu
+
+
+MS in US Universities for Low GRE Scores ( Below 290)
+
+US Schools for GRE Scores - 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 289.
+
+Temple University, PA
+www.temple.edu 
+City College of the City of New York 
+www.cuny.edu 
+Northeastern Illinois University 
+www.neiu.edu 
+University of Detroit Mercy 
+www.udmercy.edu 
+University of Arkansas Little Rock 
+www.ualr.edu 
+California State University, Fresno
+www.csufresno.edu 
+Alabama A & M University
+www.aamu.edu 
+Widener University, Pennsylvania 
+www.widener.edu
+Alcorn State University 
+www.alcorn.edu 
+Gannon University 
+www.gannon.edu 
+University of Findlay-Ohio 
+www.findlay.edu
+San Diego State University, California 
+www.sdsu.edu
+Ball State University
+www.bsu.edu 
+Northwestern Polytechnic University
+www.npu.edu 
+Jacksonville State University 
+www.jsu.edu 
+Saint Joseph University 
+www.sju.edu 
+Chapman University 
+www.chapman.edu 
+Kent State University
+www.kent.edu 
+Ferris State University
+www.ferris.edu 
+University of New Haven, CT 
+www.newhaven.edu 
+Farleigh Dickinson University, New Jersey 
+www.fdu.edu 
+State University of New York, Albany 
+www.albany.edu 
+College of William & Mary 
+www.wm.edu 
+East Tennessee State University
+www.etsu.edu 
+Southwest Texas State University, San Marcos
+www.swt.edu 
+DePaul University 
+www.depaul.edu 
+Mc Neese State University
+www.mcneese.edu 
+Oakland University
+www.oakland.edu 
+Sam Houston State University 
+www.shsu.edu 
+San Jose state University
+www.sjsu.edu 
+William Patterson University 
+www.wpunj.edu 
+Western Carolina University 
+www.wcu.edu 
+University of Central Oklahoma 
+www.ucok.edu 
+Widener University
+www.widener.edu 
+University of St Thomas, MN 
+www.stthomas.edu 
+Western Illinois university 
+www.wiu.edu 
+Bowling Green State University, Ohio 
+www.bgsu.edu 
+Delaware State University
+www.desu.edu
+State University of New York, New Paltz 
+www.newpaltz.edu 
+Central Michigan University 
+www.cmich.edu 
+University of Southern Mississippi 
+www.usm.edu 
+Indian University South Bend
+www.iusb.edu 
+Saint Mary’s University San Antonio
+www.stmarytx.edu 
+Shippensburg University, PA 
+www.ship.edu 
+East Tennessee State University 
+www.etsu.edu 
+University of Texas, Pan America 
+www.panam.edu 
+Jackson State University 
+www.jsums.edu 
+Oklahoma City University
+www.ocu.edu 
+Frostburg State University 
+www.frostburg.edu 
+La Salle University, PA 
+www.lasalle.edu 
+Alfred University 
+www.alfred.edu 
+Monmouth University-New Jersey 
+www.monmouth.edu
+Southern New Hampshire University
+www.snhu.edu 
+Roosevelt University Chicago 
+www.roosevelt.edu 
+Drake university 
+www.drake.edu 
+Shippensburg University of Pennsylvania
+www.ship.edu 
+Duquesne University
+www.duq.edu 
+Georgia College & State University
+www.gcsu.edu 
+Georgia Southern University
+www.georgiasouthern.edu 
+Kennesaw State University
+www.kennesaw.edu 
+Long Island University
+www.liu.edu 
+Loyola University Chicago
+www.luc.edu 
+Northern Kentucky University 
+www.nku.edu 
+Lawrence Tech University 
+www.ltu.edu 
+Clark Atlanta University
+www.cau.edu 
+California State University, Northridge 
+www.csun.edu 
+Catholic University of America, Washington 
+www.cua.edu
+Ohio Dominican College (University), Ohio 
+www.ohiodominican.edu 
+Ferris State University, Michigan 
+www.ferris.edu
+Fitchburg State University, MA 
+www.fsc.edu 
+Hawaii Pacific University, Hawaii 
+www.hpu.edu
+Northwood University, Michigan 
+www.northwood.edu 
+Johnson and Wales University, RI
+www.jwu.edu
+Governors State University, Parkway IL 
+www.govst.edu 
+Troy State University, Alabama 
+www.troyst.edu 
+Stevens Institute of Technology
+www.stevens-tech.edu 
+Florida Atlantic University, Boca Raton
+www.fau.edu 
+Golden Gate University
+www.ggu.edu 
+Howard University 
+www.howard.edu 
+Dominican University 
+www.dom.edu 
+
+
+
+Revised GRE Universities for GRE > 300
+
+US Universities for GRE Score Range 301, 302, 303, 304, 305, 306, 307, 308
+
+Texas Tech University	www.ttu.edu
+Wayne State University	www.wayne.edu
+California State University, Sacramento	www.csus.edu
+Missouri State University	www.missouristate.edu
+New Mexico State University	www.nmsu.edu
+North Dakota State University	www.ndsu.edu
+University of Texas-Arlington	www.uta.edu
+Clarkson University	www.clarkson.edu
+Wright State University	www.wright.edu
+University of Tennessee Chattanooga	www.utc.edu
+University of Tulsa	www.utulsa.edu
+Portland state university	www.pdx.edu
+University of Vermont	www.uvm.edu
+Baylor University, Texas	www.baylor.edu
+Villanova University	www.villanova.edu
+University of Tampa	www.utampa.edu
+Louisiana Tech. University	www.latech.edu
+New Jersey Institute of Technology	www.njit.edu
+Idaho State University	www.isu.edu
+Wichita State University	www.wichita.edu
+University of Mississippi	www.olemiss.edu
+Northeastern University	www.northeastern.edu
+Southern Illinois University-Edwardsville	www.siue.edu
+University of Alaska- Fairbanks	www.uaf.edu
+Pace University, NY	www.pace.edu
+Wright State University	www.wright.edu
+Chicago State University	www.csu.edu
+South Dakota State University	www.sdsu.edu
+East Carolina University	www.ecu.edu
+University of North Texas	www.unt.edu
+SUNY Institute of Technology	www.sunyit.edu
+University of Missouri at St Louis	www.umsl.edu
+University of Northern Iowa	www.uni.edu
+University of Toledo	www.utoledo.edu
+University of Illinois at Springfield	www.uis.edu
+Old Dominion University, Virginia	www.odu.edu
+
+
+US Schools for Revised GRE Score > 290
+US Universities for GRE Score Range 291, 292, 293, 294, 295, 296, 297, 298, 299, 300
+
+Northwest Missouri State University	www.nwmissouri.edu
+Lamar University	www.lamar.edu
+Illinois State University, Normal	www.ilstu.edu
+University of Louisville	www.louisville.edu
+Texas A & M University, Commerce	tamu-commerce.edu
+Colorado Technical University, Colorado Springs	www.coloradotech.edu
+Boise State university, Idaho	www.boisestate.edu
+Montana State University, Bozeman	www.montana.edu
+South Dakota School of Mines & technology	www.sdsmt.edu
+North Carolina Agricultural & Tech State University	www.ncat.edu
+Southern Illinois University, Carbondale	 www.siuc.edu
+Florida International university	www.fiu.edu
+North Dakota State University	www.nodak.edu
+Western Kentucky University	www.wku.edu
+Bradley University	www.bradley.edu
+Cleveland State University	www.csuohio.edu
+University of Bridgeport –CT	www.bridgeport.edu
+University of Dayton –Ohio	www.udayton.edu
+Texas A & M university, Kingsville	www.tamuk.edu
+University of West Florida, Pensacola	www.uwf.edu
+Eastern Michigan University	www.emich.edu
+Minnesota State University, Mankato	www.mnsu.edu
+Suffolk University, MA	www.suffolk.edu
+University of North Carolina, Greensboro	www.uncg.edu
+New Mexico Institute of Mining &Tech.	www.nmt.edu
+University of Central Arkansas	www.uca.edu
+Southeastern University, DC	www.seu.edu
+University of Hawaii	www.hawai.edu
+University of Texas, Tyler	www.uttyler.edu
+Eastern Washington University	www.ewu.edu
+Southern Oregon University, Ashland	www.sou.edu
+University of Texas at San Antonio	www.utsa.edu
+State University of West Georgia	www.westga.edu
+Ball State University	www.bsu.edu
+University of Texas El Paso	www.utep.edu
+Columbus State University	www.colstate.edu
+Arkansas State University	www.astate.edu
+University of Denver	www.du.edu
+North Dakota State University	www.ndsu.edu
+New York Institute of Technology	www.nyit.edu
+California State University, Chico	www.csuchico.edu
+Dakota State University	www.dsu.edu
+St Cloud State University	www.stcloudstate.edu
+Marquette University	www.marquette.edu
+

@@ -90,11 +90,11 @@ $(document).ready(function() {
         <p><strong style="color: #999; text-align: left;"> Your Masters Breadth Area:
             </strong>
           <select name="select" required="required" id="select" title="subject area">
-            <option value="1">Engineering &amp; Technology</option>
-            <option value="2">Arts and Humanities</option>
-            <option value="3">Life Sciences and Medicine</option>
-            <option value="4">Natural Sciences</option>
-            <option value="5">Social Sciences</option>
+            <option value="Engineering">Engineering &amp; Technology</option>
+            <option value="Arts">Arts and Humanities</option>
+            <option value="Life">Life Sciences and Medicine</option>
+            <option value="Natural">Natural Sciences</option>
+            <option value="Social">Social Sciences</option>
           </select>
 
           <label for="select">Select <br />

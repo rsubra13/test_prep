@@ -1,18 +1,7 @@
 <!DOCTYPE html>
-
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
-
-include "../includes/conn.php";
-include "../includes/includes.php";
-
-?>
-
 <html>
 <head>
-<title>GRE PREP</title>
+<title>Free Educational Trip</title>
 <meta charset="utf-8">
 <!-- CSS -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
@@ -80,7 +69,7 @@ include "../includes/includes.php";
       </div>
     </form>
     <!-- ENDS search -->
-       <!-- Navigation -->
+        <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
       <li class="current-menu-item"><a href="template.php">HOME</a></li>
       <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
@@ -101,7 +90,7 @@ include "../includes/includes.php";
           <li><a href="gallery-video.html">Video gallery</a></li>
         </ul>
       </li>
-      <li><a href="blog.html">BLOG</a>
+      <li><a href="blog.html">TESTS</a>
         <ul>
           <li><a href="blog.html">Full blog</a></li>
           <li><a href="blog-compact.html">Compact blog</a></li>
@@ -114,13 +103,14 @@ include "../includes/includes.php";
     </ul>
     <!-- Navigation -->
     <!-- categories -->
-    <ul class="cat-list">
-      <li>
-        <h6>User Statistics</h6>
+    
+    <li>
+      <ul class="cat-list">
+        <li> 
       </li>
       
      
-    </ul>
+  </ul>
     <!-- categories -->
    
     <!-- Social -->
@@ -133,72 +123,45 @@ include "../includes/includes.php";
       <li><a href="#" class="youtube" title="View our videos"></a></li>
     </ul>
     <!-- ENDS Social -->
-  </div>
+  </div>area>
   <!-- ENDS SIDEBAR -->
   <!-- MAIN -->
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
+
+
+    <label ><strong style="color: #02C"> FREE ONE-DAY EDUCATIONAL TRIP</label> <p>
+
+    <label ><italic style="color: #09C"> <p>&nbsp;</p> * Do you wann  <align = left> </align00>
+    
    
-    <!-- CONTENT -->
-    <div id="content">
-      <!-- PAGE CONTENT -->
-      <div id="page-content">
-        <!-- feature blocks -->
-        <h1 class="header-line"><!-- ENDS feature blocks -->
-        <!-- TABS --></h1>
-        <form id="form1" name="form1" method="post">
-          <p>Welcome User ! </p>
-          <p><strong style="color: #09C"> Your Subject area is :
-            </strong>
-            <input type="text" name="textfield" id="textfield">
-          </p>
-                  <p><strong><span style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-style: oblique; color: #03C;">Your current GRE Score Range: </span> </strong>
-                    <input type="text" name="textfield" id="textfield">
-          </p>
+     
 
-          <?php
-          
 
-          echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                <th width="10%">ID</th>
-                <th width="25%">NAME</th>
-                <th width="25%">UNIV_NAME</th>
-                <th width="25%">UNIQUE_ID</th>
-                </tr>';
 
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
-          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
-          $result=mysql_query($strsql, $conn);
-          
-                    while($row = mysql_fetch_array($result))
-                    {
-                      echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
-                      echo '</tr>'; 
-                    $counter++; 
-                    } 
+    </label> <p>
 
-          echo '</table>';  
- 
-         ?>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </form>
-          
-      </div>
-        <!-- ENDS TABS -->
-      </div>
-      <!-- ENDS PAGE-CONTENT -->
-    </div>
-    <!-- ENDS CONTENT -->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+
+
+
+
+     <a href="Universities.php"><img src="images/free.jpg"  alt="" width="277" height="123" class="blocks-gallery" id="image"/></a>
+
+    <!-- CONTENT --><!-- ENDS CONTENT -->
+
+  </p>
   </div>
   <!-- ENDS MAIN -->
 </div>
