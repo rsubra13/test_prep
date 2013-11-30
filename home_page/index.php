@@ -97,7 +97,7 @@
         </ul>
       </li>
       <!--<li><a href="../phpBB/ucp.php?mode=login">DISCUSSION FORUM</a> <!-->
-      <li><a href="discussion.php">DISCUSSION FORUM</a>
+      <li><a href="../phpBB/ucp.php">DISCUSSION FORUM</a>
   
        </li>
       <li><a href="contact.html">MESSAGES</a></li>
