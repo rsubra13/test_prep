@@ -429,7 +429,11 @@ mindmaps.DefaultCanvasView = function() {
 	
 	var $wiki = $("<a/>", {
 	id : "node-cap-" + node.id,
+<<<<<<< HEAD
+	href : "http://localhost/wiki/" + node.text.caption,
+=======
 	href : "http://localhost/webtester5/w/index.php/lucid",
+>>>>>>> upstream/master
 	target : "_blank",
 	//"class" : "node-caption node-text-behaviour",
 	text : node.text.caption
@@ -700,7 +704,10 @@ mindmaps.DefaultCanvasView = function() {
     });
 
     var metrics = textMetrics.getTextMetrics(node, this.zoomFactor);
+<<<<<<< HEAD
+=======
 
+>>>>>>> upstream/master
     $text.css({
       "color" : font.color,
       "font-weight" : font.weight,
@@ -805,11 +812,20 @@ mindmaps.DefaultCanvasView = function() {
       self.stop();
     }).bind("keydown", "return", function() {
       commitText();
+<<<<<<< HEAD
+      $("#node-cap-"+node.id).attr('href', "http://localhost/wiki/" + $editor.val());
+     
+=======
+>>>>>>> upstream/master
     }).mousedown(function(e) {
       // avoid premature canceling
       e.stopPropagation();
     }).blur(function() {
       commitText();
+<<<<<<< HEAD
+      $("#node-cap-"+node.id).attr('href', "http://localhost/wiki/" + $editor.val());
+=======
+>>>>>>> upstream/master
     }).bind(
         "input",
         function() {
@@ -850,9 +866,14 @@ mindmaps.DefaultCanvasView = function() {
       // TODO put text into span and hide()
       this.$text = $getNodeCaption(node);
       this.$cancelArea = $cancelArea;
+<<<<<<< HEAD
+      
+      this.text = this.$text.text();
+=======
 
       this.text = this.$text.text();
 
+>>>>>>> upstream/master
       this.$text.css({
         width : "auto",
         height : "auto"
@@ -862,7 +883,13 @@ mindmaps.DefaultCanvasView = function() {
       // draggable. need this
       // workaround to detect click on other draggable
       $cancelArea.bind("mousedown.editNodeCaption", function(e) {
+<<<<<<< HEAD
+    	//$('a').attr('href', "http://localhost/wiki/" + this.text);
+        commitText(); 
+        $("#node-cap-"+node.id).attr('href', "http://localhost/wiki/" + $editor.val());
+=======
         commitText();
+>>>>>>> upstream/master
       });
 
       var metrics = textMetrics.getTextMetrics(self.node,
@@ -883,7 +910,10 @@ mindmaps.DefaultCanvasView = function() {
         $editor.detach();
         this.$cancelArea.unbind("mousedown.editNodeCaption");
         view.setNodeText(this.node, this.text);
+<<<<<<< HEAD
+=======
 
+>>>>>>> upstream/master
         alignBranches();
       }
     };

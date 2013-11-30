@@ -18,6 +18,10 @@ mindmaps.Node = function() {
       color : "#000000"
     }
   };
+<<<<<<< HEAD
+  this.href = "";
+=======
+>>>>>>> upstream/master
   this.offset = new mindmaps.Point();
   this.foldChildren = false;
   this.branchColor = "#000000";

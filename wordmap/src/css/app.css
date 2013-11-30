@@ -88,7 +88,11 @@ html,body {
 }
 
 #toolbar {
+<<<<<<< HEAD
+  background-color: #CECECE;
+=======
   background-color: #E5E5E5;
+>>>>>>> upstream/master
   overflow: hidden;
   width: 100%;
 }
@@ -139,13 +143,27 @@ html,body {
 }
 
 #bottombar {
+<<<<<<< HEAD
+  position: absolute; /* absolute caused scroll bar, depending on border */
+  width: 100%;
+  bottom: 50px;
+=======
   position: fixed; /* absolute caused scroll bar, depending on border */
   width: 100%;
   bottom: 0;
+>>>>>>> upstream/master
   background: #EEE;
   border-top: 1px solid #AAA;
 }
 
+<<<<<<< HEAD
+/* .orangebutton {
+	position: absolute;
+	bottom: 240px:
+}
+ */
+=======
+>>>>>>> upstream/master
 #statusbar {
   height: 32px;
 }

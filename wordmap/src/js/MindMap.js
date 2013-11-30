@@ -18,12 +18,31 @@ mindmaps.MindMap = function(root) {
     this.root = new mindmaps.Node();
     this.root.text.font.size = 20;
     this.root.text.font.weight = "bold";
+<<<<<<< HEAD
+    this.root.text.caption = getUrlVars()["word"];
+=======
     this.root.text.caption = "Central Idea";
+>>>>>>> upstream/master
   }
 
   this.addNode(this.root);
 };
 
+<<<<<<< HEAD
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+=======
+>>>>>>> upstream/master
 /**
  * Creates a new mind map object from JSON String.
  * 

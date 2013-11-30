@@ -11,13 +11,25 @@
 <meta name="description" content="mindmaps is an HTML5 based mind mapping app. It lets you create neat looking mind maps in the browser." />
 <meta name="keywords" content="mind maps html5 mindmaps offline easy intuitive" />
 <meta name="google" content="notranslate"/>
+<<<<<<< HEAD
+<title>WordMaps</title>
+=======
 <title>mindmaps</title>
+>>>>>>> upstream/master
 <link rel="icon" type="image/png" href="img/favicon.png" />
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/Aristo/jquery-ui-1.8.7.custom.css" />
 <link rel="stylesheet" href="css/minicolors/jquery.miniColors.css">
+<<<<<<< HEAD
+<div style='background-color: #E5E5E5'>
+<br/>
+<div style='font-size: 15px; margin-left: 10px; color: #4F4F4F'>Logged in as <span style='font-weight: bold'>Admin</span></div>
+<br/>
+</div>
+=======
 
+>>>>>>> upstream/master
 <script id="template-float-panel" type="text/x-jquery-tmpl">
 <div class="ui-widget ui-dialog ui-corner-all ui-widget-content float-panel no-select">
   <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix">
@@ -182,6 +194,26 @@
 </div>
 </script>
 
+<<<<<<< HEAD
+<script type="text/javascript">
+function start_chat()
+{
+document.getElementById('iframe').src = '/webtester5/wordmap/video_chat.html';
+}
+function breakout_of_frame()
+{
+  if (top.location != location) {
+    top.location.href = "http://localhost/webtester5/userArea.php";
+	}
+}
+function submit()
+{
+	document.getElementById('complete').value = 'true'; 
+	document.getElementById('done').submit();
+}
+</script>
+=======
+>>>>>>> upstream/master
 </head>
 <body>
   <div id="print-area">
@@ -195,7 +227,11 @@
     <div id="topbar">
       <div id="toolbar">
         <div id="logo" class="logo-bg">
+<<<<<<< HEAD
+          <span>WordMaps</span>
+=======
           <span>mindmaps</span>
+>>>>>>> upstream/master
         </div>
 
         <div class="buttons">
@@ -209,8 +245,40 @@
       <div id="drawing-area" class="no-select"></div>
     </div>
     <div id="bottombar">
+<<<<<<< HEAD
+      <div class="buttons">
+      <form id='done' action='submit.php'>
+      	<span class="buttons-left">
+      		<span class="ui-buttonset">
+      		<button id="button-CREATE_NODE_COMMAND" class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-primary" role="button" aria-disabled="false">
+      			<span class="ui-button-text"><a href="javascript:breakout_of_frame()">Back to Course Page</a></span>
+      		</button>
+      		</span>
+      		<span class="ui-buttonset">
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      			
+      		</span>
+      		<span class="ui-buttonset">
+      		<input type='hidden' id='complete' name='complete' value='false'>
+      		<button id="button-COPY_COMMAND" class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-primary" role="button" aria-disabled="false">
+					<span class="ui-button-text"><a href="javascript:submit()">Submit</a></span>
+			</button>
+      		</span> 		
+      	</span>
+      	</form>
+      	
+     <!--  <img src="/webtester5/wordmap/ASU.jpg"> 
+       <a href="about.html" target="_blank">About WordMaps</a> <span
+=======
       <div id="about">
         <a href="about.html" target="_blank">About mindmaps</a> <span
+>>>>>>> upstream/master
           style="padding: 0 4px;">|</span> <a style="font-weight: bold"
           href="https://spreadsheets.google.com/a/drichard.org/spreadsheet/viewform?formkey=dEE3VzFWOFp6ZV9odEhhczVBUUdzc2c6MQ"
           target="_blank">Feedback</a>
@@ -218,7 +286,11 @@
       <div id="statusbar">
         <div
           class="buttons buttons-right buttons-small buttons-less-padding"></div>
+<<<<<<< HEAD
+      </div>-->
+=======
       </div>
+>>>>>>> upstream/master
     </div>
   </div>
 
