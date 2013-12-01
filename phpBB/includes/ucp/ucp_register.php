@@ -429,13 +429,13 @@ class ucp_register
 		$s_hidden_fields = build_hidden_fields($s_hidden_fields);
 		$confirm_image = '';
 
-		// Visual Confirmation - Show images
-		if ($config['enable_confirm'])
-		{
-			$template->assign_vars(array(
-				'CAPTCHA_TEMPLATE'		=> $captcha->get_template(),
-			));
-		}
+		// // Visual Confirmation - Show images
+		// if ($config['enable_confirm'])
+		// {
+		// 	$template->assign_vars(array(
+		// 		'CAPTCHA_TEMPLATE'		=> $captcha->get_template(),
+		// 	));
+		// }
 
 		//
 		$l_reg_cond = '';

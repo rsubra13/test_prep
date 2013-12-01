@@ -71,14 +71,14 @@
     <!-- ENDS search -->
     <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
-      <li class="current-menu-item"><a href="template.php">HOME</a></li>
-      <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
+      <li class="current-menu-item"><a href="index.php">HOME</a></li>
+      <li><a href="contest.php">FREE EDUCATIONAL TRIP</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">MIND MAPS</a></li>
+      <li><a href="template.php">MIND MAPS</a></li>
       <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>

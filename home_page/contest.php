@@ -64,7 +64,7 @@
   <!-- SIDEBAR -->
   <div id="sidebar">
     <!-- logo --><a href="index.html"><img src="images/gre_prep.jpg" alt="" name="logo" height="83" id="logo"></a><!-- search -->
-    <form  method="get" id="searchform" action="#">
+    <form  method="post" id="searchform" action="contest_rules.php">
       <div>
       </div>
     </form>
@@ -112,54 +112,65 @@
      
   </ul>
     <!-- categories -->
-   
-    <!-- Social -->
-    <ul class="social">
-      <li>
-        <h6>Follow us</h6>
-      <li><a href="www.facebook.com" class="facebook" title="Become a fan"></a></li>
-      <li><a href="#" class="twitter" title="Follow our tweets"></a></li>
-
-      <li><a href="#" class="youtube" title="View our videos"></a></li>
-    </ul>
-    <!-- ENDS Social -->
-  </div>area>
+  
+  </div>
   <!-- ENDS SIDEBAR -->
   <!-- MAIN -->
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
 
 
-    <label ><strong style="color: #02C"> FREE ONE-DAY EDUCATIONAL TRIP</label> <p>
+    <label ><strong style="color: #79C"> FREE ONE-DAY EDUCATIONAL TRIP</label> <p>
 
-    <label ><italic style="color: #09C"> <p>&nbsp;</p> * Do you wann  <align = left> </align00>
-    
    
-     
+    <div class> <italic style="color: #79C">
+  
+    <p> <align = left> </align> <underline style="color: #005"> What this contest is all about?  <p>&nbsp;</p>
 
 
 
-    </label> <p>
+  <style>
+  ul 
+  {
+  list-style-image:url('./images/bullet_small.jpg');
+  list-style-position:inside;
+  }
+    </style>  
+              <ul>
+              <li > 
+              <strong style="color: #80C"> 
+              Are you in a dilemma to select your dream College(s)? <p>&nbsp;</p>
 
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+             <li > 
+              <strong style="color: #80C"> 
+              Do you wish to visit your dream college before getting admitted?  <p>&nbsp;</p>
 
 
+              <li > 
+              <strong style="color: #80C"> 
+              Do you wanna know the GRE score range for your dream School?  <p>&nbsp;</p>
+
+              <li > 
+              <strong style="color: #80C"> 
+              Wanna experience a pep talk from Seniors?  <p>&nbsp;</p>
 
 
+              <li > 
+              <strong style="color: #80C"> 
+              To get a bird's eye view of the ongoing Researdh in your dream Universities?  
 
-     <a href="Universities.php"><img src="images/free.jpg"  alt="" width="277" height="123" class="blocks-gallery" id="image"/></a>
+              </ul>
+
+    </p> </label> <p>
+
+    <label ><strong style="color: #09C"> If your answer is "YES" click below </label> <p>
+
+    
+    <a href="contest_rules.php"><img src="images/free.jpg"  alt="" width="277" height="123" class="blocks-gallery" id="image"/></a>
 
     <!-- CONTENT --><!-- ENDS CONTENT -->
+
+    </div>
 
   </p>
   </div>

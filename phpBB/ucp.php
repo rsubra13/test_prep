@@ -29,9 +29,8 @@ if (in_array($mode, array('login', 'logout', 'confirm', 'sendpassword', 'activat
 }
 
 // Start session management
-$u = $user->session_begin();
-echo $u;
-$a=$auth->acl($user->data);
+$user->session_begin();
+$auth->acl($user->data);
 $user->setup('ucp');
 // Setting a variable to let the style designer know where he is...
 $template->assign_var('S_IN_UCP', true);

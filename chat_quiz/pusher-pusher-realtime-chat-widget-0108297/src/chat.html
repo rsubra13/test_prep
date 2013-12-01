@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Chat </title>
+    
+    <link rel="stylesheet/less" type="text/css" href="lib/twitter-bootstrap/lib/bootstrap.less">
+    <script src="lib/less/less-1.1.5.min.js"></script>
+    
+    <link href="styles.css" rel="stylesheet" />
+    <link href="pusher-chat-widget.css" rel="stylesheet" />
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
+    <script src="js/PusherChatWidget.js"></script>    
+    <script>
+      $(function() {     
+        var pusher = new Pusher('8ee84a625443f33fef39')
+        var chatWidget = new PusherChatWidget(pusher, {
+         appendTo: '#pusher_chat_widget'
+		  //appendTo: 'pusher-realtime-chat-widget/src/php/chat.php'
+		//chatEndPoint: 'localhost/pusher-realtime-chat-widget/src/php/chat.php'
+		 
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="topbar">
+        <div class="fill">
+          <div class="container">
+            <a class="brand" href="/">         quiz!!!!!!!         </a>
+          </div>
+        </div>
+      </div>
+
+     <div class="hero-unit">
+       </div>
+      
+      <section class="realtime-chat">
+        
+        <div class="page-header">
+          <h1> GRE quiz!!! :) </h1>
+        </div>
+        
+        <div class="row">
+          
+          <div class="span5">
+            <p>
+              <p></p>
+            </p>
+          </div>
+          <div class="span5" id='pusher_chat_widget'>
+          </div>
+          
+        </div>
+        
+      </section>
+
+      <footer>
+        <p></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>

@@ -8,6 +8,7 @@ ini_set('display_startup_errors', TRUE);
 include "../includes/conn.php";
 include "../includes/includes.php";
 
+
 ?>
 
 <html>
@@ -147,50 +148,106 @@ include "../includes/includes.php";
         <h1 class="header-line"><!-- ENDS feature blocks -->
         <!-- TABS --></h1>
         <form id="form1" name="form1" method="post">
-          <p>Welcome User ! </p>
+         <!--  <p>Welcome User ! </p>
           <p><strong style="color: #09C"> Your Subject area is :
             </strong>
             <input type="text" name="textfield" id="textfield">
           </p>
                   <p><strong><span style="font-family: Tahoma, Arial, Helvetica, sans-serif; font-style: oblique; color: #03C;">Your current GRE Score Range: </span> </strong>
                     <input type="text" name="textfield" id="textfield">
-          </p>
+          </p> -->
 
           <?php
+
+          $uid=$_SESSION['userID'];
+          $uname=$_SESSION['username'];
+          #echo "uname " , $uname;
+          #echo "uid " , $uid;
           
 
-          echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                <th width="10%">ID</th>
-                <th width="25%">NAME</th>
-                <th width="25%">UNIV_NAME</th>
-                <th width="25%">UNIQUE_ID</th>
+           $sessionsql = "SELECT users.Username,users.stream,users.gre_range
+                          FROM users 
+                          inner join sessions
+                          on users.ID = $uid
+                          group by users.ID";
+          
+          $result=mysql_query($sessionsql, $conn);
+          #echo "result:",$result;
+          
+
+
+          if($result === FALSE) 
+          {
+            die(mysql_error()); // TODO: better error handling
+          }
+          
+            echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
+                <th width="25%">Your Name </th>
+                <th width="25%">Current GRE Score Range</th>
+                <th width="25%">Desired Masters Stream</th>
+                </tr>';
+          
+           while($row = mysql_fetch_array($result))
+                    {
+                      echo '<p><strong style="color: #07C"> Hello  '.$row['Username'].'       ! </p>';
+echo '<p><strong style="color: #02C"> As per our records, you have provided these details...</p>'; 
+
+                      echo '<tr class="select">';
+                      echo '<td><center><strong style="color: #02C"> '.$row['Username'].'</center></td>';
+                      echo '<td><center><strong style="color: #02C"> '.$row['gre_range'].'</center></td>';
+                      echo '<td><center><strong style="color: #02C"> '.$row['stream'].'</center></td>';
+                      echo '</tr>'; 
+                     
+                   
+                     } 
+
+           echo '</table>';         
+
+
+
+             $univsql = "SELECT UNIV_NAME,WEBSITE
+                          FROM stellar_performers";
+          
+          $result=mysql_query($univsql, $conn);
+          #echo "result:",$result;
+          
+
+
+          if($result === FALSE) 
+          {
+            die(mysql_error()); // TODO: better error handling
+          }
+          
+            echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
+                <th width="25%">UNIV_NAME </th>
+                <th width="25%">WEBSITE</th>
                 </tr>';
 
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
-          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
-          $result=mysql_query($strsql, $conn);
+            echo '<p><strong style="color: #07C"> Dear  ' . $_SESSION['username'] .'! </p>';
+            echo '<p><strong style="color: #72C"> For your current GRE Score, and your preferred Masters subject stream , we have a list of Universities.... 
+              </p>';     
           
-                    while($row = mysql_fetch_array($result))
+             while($row = mysql_fetch_array($result))
                     {
-                      echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
-                      echo '</tr>'; 
-                    $counter++; 
-                    } 
+                      
 
-          echo '</table>';  
- 
+                      echo '<tr class="select">';
+                      echo '<td><center><strong style="color: #59C"> '.$row['UNIV_NAME'].'</center></td>';
+                      echo '<td><center><strong style="color: #59C">'.$row['WEBSITE']. '</center></td>';
+                      echo '</tr>'; 
+                     
+                   
+                     } 
+
+           echo '</table>';                
+                
+         
          ?>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
+
+          <label ><strong style="color: #02C">Wanna know who won this contest last year ? click below...</label> <p>
+        
+    <a href="performers.php"><img src="images/stellar-performers.png"  alt="" width="277" height="123" class="blocks-gallery" id="image"/></a>
+
         </form>
           
       </div>

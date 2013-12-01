@@ -147,13 +147,38 @@
               Stellar Performers of Your Major
             </caption>
             <?php
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+          error_reporting(E_ALL);
+          ini_set('display_errors', TRUE);
+          ini_set('display_startup_errors', TRUE);
 
-include "../includes/conn.php";
-include "../includes/includes.php";
+        include "../includes/conn.php";
+        include "../includes/includes.php";
 
+
+ echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
+                <th width="10%">ID</th>
+                <th width="25%">NAME</th>
+                <th width="25%">UNIV_NAME</th>
+                <th width="25%">UNIQUE_ID</th>
+                </tr>';
+
+          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
+          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
+          $result=mysql_query($strsql, $conn);
+          
+                    while($row = mysql_fetch_array($result))
+                    {
+                      echo '<tr class="select">';
+                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
+                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
+                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
+                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
+                      echo '</tr>'; 
+                    $counter++; 
+                    } 
+
+          echo '</table>';  
+ 
 $strsql = "SELECT * FROM `stellar_performers` ";
 $result=mysql_query($strsql, $conn);
 #echo $result;

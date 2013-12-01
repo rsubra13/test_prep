@@ -92,9 +92,9 @@ $(document).ready(function() {
           <select name="select" required="required" id="select" title="subject area">
             <option value="Engineering">Engineering &amp; Technology</option>
             <option value="Arts">Arts and Humanities</option>
-            <option value="Life">Life Sciences and Medicine</option>
-            <option value="Natural">Natural Sciences</option>
-            <option value="Social">Social Sciences</option>
+            <option value="Life Sciences">Life Sciences and Medicine</option>
+            <option value="Natural Sciences">Natural Sciences</option>
+            <option value="Social Sciences">Social Sciences</option>
           </select>
 
           <label for="select">Select <br />
@@ -105,11 +105,11 @@ $(document).ready(function() {
             Your Current GRE score Range is :</strong>
           </span>
           <select name="select2" required="required" id="select2" tabindex="1" title="subject area">
-            <option value="1">320 and above</option>
-            <option value="2">311 -320</option>
-            <option value="3">300-310</option>
-            <option value="4">290-299</option>
-            <option value="5">280-289</option>
+            <option value="320 and above">320 and above</option>
+            <option value="311 -320">311 -320</option>
+            <option value="300-310">300-310</option>
+            <option value="290-299">290-299</option>
+            <option value="280-289">280-289</option>
           </select>
         </p>
       
