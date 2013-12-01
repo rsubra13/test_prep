@@ -71,14 +71,14 @@
     <!-- ENDS search -->
     <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
-      <li class="current-menu-item"><a href="index.php">HOME</a></li>
-      <li><a href="contest.php">FREE EDUCATIONAL TRIP</a>
+      <li class="current-menu-item"><a href="template.php">HOME</a></li>
+      <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
         <ul>
           <li><a href="features.html">Columns layout</a>
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="./courses.php">COURSES</a></li>
+      <li><a href="../userArea.php">COURSES</a></li>
       <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>
@@ -124,46 +124,20 @@
     </ul>
     <!-- ENDS Social -->
   </div>
+ </div>
   <!-- ENDS SIDEBAR -->
   <!-- MAIN -->
-  <div align="center" id="main">
+  <div style="margin:-640px 300px 0px 300px">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score More!</div>
+	
+	<h2 style='color:#666'>&nbsp;&nbsp;&nbsp;&nbsp;GRE Courses</h2>
+	<br />
     <!-- Slider -->
-    <div id="slider"> <a href="#"><img src="images/1.png" alt=""></a> <a href="#"><img src="images/2.png" alt=""></a> <a href="#"><img src="images/3.png" alt=""></a> </div>
-    <!-- ENDS Slider -->
-    <!-- CONTENT -->
-    <div id="content">
-      <!-- PAGE CONTENT -->
-      <div id="page-content">
-        <!-- feature blocks -->
-        <h1 class="header-line"><strong style="color: #02C">Fascinating Features</h1>
-        <ul  class="feature-blocks" >
-          <li>
-            <div class="block"> <strong style="color: #09C"> <a href="single.html" ><img src="img/dummies/272x250.jpg" alt="" width="272" height="250" class="cover"></a> </div>
-            <div class="the-excerpt"><strong><strong style="color: #92C">Learn with Mind Maps</strong></div>
-            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
-          <li>
-            <div class="block"> <a href="contest.php" ><img src="img/dummies/race.jpg" alt="" width="270" height="252" class="cover"></a> </div>
-            <div class="the-excerpt"><strong style="color: #92C">Free Educational Trip Contest!! </strong></div>
-           <a href="contest.php"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
-          <li>
-		    <div class="block"> <a href="single.html" ><img class="cover" src="img/dummies/272x250c.jpg" alt=""></a> </div>
-            <div class="the-excerpt"> <strong><strong style="color: #92C">Stuck at something? Need a Mentor? </strong> </div>
-            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
-          <li>
-            <div class="block"> <a href="single.html" ><img class="cover" src="img/dummies/272x250d.jpg" alt=""></a> </div>
-            <div class="the-excerpt"> <strong><strong style="color: #92C">Group Tests?An exciting experience </strong></div>
-            <a href="single.html"  class="link-button"><span><strong style="color: #09C">Click Here to know more</span></a> </li>
-        
-        </ul>
-        <!-- ENDS feature blocks -->
-          </div>
-      <!-- ENDS PAGE-CONTENT -->
-    </div>
-    <!-- ENDS CONTENT -->
-  </div>
+		<iframe src="../userArea.php" style="width:1100px;height:1000px"></iframe>
+	
+ </div>
   <!-- ENDS MAIN -->
-</div>
+
 <!-- ENDS WRAPPER -->
 <!-- FOOTER -->
 <div id="footer">

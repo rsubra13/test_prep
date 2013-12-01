@@ -51,6 +51,20 @@ body {display:none}
 }
 
 </style>
+<script type="text/javascript">
+function breakout_of_frame()
+{
+  if (top.location != location) {
+    top.location.href = './wordmap.html?word=Abate';
+	}
+}
+function breakout_of_frame1()
+{
+  if (top.location != location) {
+    top.location.href = './wordmap.html?word=';
+	}
+}
+</script>
 </head>
 <?php
 	  if (IPSESSIONS) {
@@ -80,9 +94,9 @@ include "./includes/top.php";
 <div align="center"> 
   <table width="100%" border="0" cellpadding="2" cellspacing="0">
     <tr> 
-      <td height="47" align="left" valign="middle"><img src="images/webtestertop.gif" width="<?=LOGOW?>" height="<?=LOGOH?>">
+      <!-- <td height="47" align="left" valign="middle"><img src="./images/learning-words.jpg" width="<?=LOGOW?>" height="<?=LOGOH?>">
         <br>        
-      </td>
+      </td>  -->
       <td align="center" valign="middle">
 	            <?php if (!$myVar) { ?>
 	      
@@ -110,12 +124,36 @@ include "./includes/top.php";
 ?> 
 </td>
     </tr>
+	<div style="background:#E9E9E9">
+	<tr style="background:#E9E9E9">
+	<td>
+	<p style='background:#E9E9E9;color:#880101'><strong>Available Lectures for <?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></strong></p>
+	</td>
+	</tr>
+	<tr style="background:#E9E9E9;align:center">
+	<td><p class="style1"><strong>Presentations</strong></p></td>
+	<tr>
+	<tr>
+	<td style="background:#E9E9E9">
+		<iframe src="http://www.slideshare.net/slideshow/embed_code/27912068" width="500" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+		</td>
+	<td>
+	</tr>
+	<tr style="background:#E9E9E9;align:center">
+	<td><br/><p class="style1"><strong>Video Lectures</strong></p></td>
+	</tr>
+	<tr>
+	<td style="background:#E9E9E9">
+	<iframe width="560" height="315" src="//www.youtube.com/embed/hNgMRvRUQLU" frameborder="0" allowfullscreen></iframe>
+	</td>
+	</tr>
+	</div>
     <tr> 
       <td colspan="2" align="left" valign="top"> <div class="hr">
         <hr />
       </div>       
         <!-- InstanceBeginEditable name="Content Area" -->
-        <p class="style1"><strong>Available Activities and Tests for <?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></strong> - <a href="./changePassword.php">Change Password</a> - <a href="./logout.php">Logout</a></p>
+        
         <?php
 		$limitedsubjects=explode(",",$_SESSION['limitedsubjects']);
 		$subjectsfilter=implode(" OR ",$limitedsubjects);
@@ -145,15 +183,16 @@ include "./includes/top.php";
 			<td width="240"><strong>Activity Description</strong></td>
 		</tr>
 		<tr class="d0">
-			<td>Collaboratively build a WordMap for <strong><a href="wordmap.html?word=Abate">Abate</a></strong><br/>Activity due <strong>Nov 29</strong></td>
+			<td>Collaboratively build a WordMap for <strong><a href="javascript:breakout_of_frame()">Abate</a></strong><br/>Activity due <strong>Dec 10</strong></td>
 			<td>As a group, build a WordMap for <b>Abate</b>. <br/>One member in the group will serve as a facilitator for this activity</td>
 		</tr>
 		<tr class="d1">
-			<td>Collaboratively build Wiki pages for the words you added in <strong><a href="./wordmap/index.html">your WordMap</a></strong><br/>Activity due <strong>Dec 5</strong></td>
+			<td>Collaboratively build Wiki pages for the words you added in <strong><a href="javascript:breakout_of_frame1()">your WordMap</a></strong><br/>Activity due <strong>Dec 20</strong></td>
 			<td>Open the WordMap from your Google Drive/Dropbox. Click on each word to edit the Wiki. <br/>If the Wiki is blank, then create one. <br/>If the Wiki has contents in it, think and add/modify the existing content to improve the Wiki's content quality</td>
 		</tr>
+	</tr>
 		<table class="style1 style5" width="100%"  border="0" cellspacing="2" cellpadding="0" onMouseOut="javascript:highlightTableRowVersionA(0);">
-  <tr bgcolor="#C8D8FF">
+		<tr bgcolor="#C8D8FF">
 	<br>
 	<br>
     <td>Name</td>
@@ -180,12 +219,12 @@ include "./includes/top.php";
 <!-- InstanceEndEditable -->	 
  </td>
     </tr>
-    <tr>
+    <!--<tr>
       <td colspan="2" align="center" valign="top">
         <div align="center"> 
 		<div class="hr"><hr /></div>
           <?php include "./includes/copyright.php" ?></div></td>
-    </tr>
+    </tr>-->
   </table>
 </div>
 </body>

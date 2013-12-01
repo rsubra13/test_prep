@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <html>
 <head>
@@ -14,11 +13,11 @@ function func()
         vars[hash[0]] = hash[1];
     }
 var word = vars["word"];
-document.getElementById('wordmap').src='./wordmap/index.html?word=' + word;
+document.getElementById('wordmap').src='./wordmap/app/index.html?word=' + word;
 }
 </script>
-<frameset cols="20%,*">
-  <frame src="./wordmap/videochat.html">
+<frameset cols="25%,*">
+  <frame src="./wordmap/app/videochat.html" scrolling='auto' style='overflow:visible'>
   <frame id='wordmap' src="" onload='func()'>
 </frameset>
 </head>

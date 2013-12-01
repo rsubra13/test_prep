@@ -78,7 +78,7 @@
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">MIND MAPS</a></li>
+      <li><a href="../userArea.php">COURSES</a></li>
       <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>

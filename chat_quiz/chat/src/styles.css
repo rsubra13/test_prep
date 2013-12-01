@@ -1,6 +1,5 @@
 body {
-  margin-left: 4px;
-  margin-right: 4px;
+  
 }
 
 .container {
@@ -30,7 +29,7 @@ body {
 
 #pusher_chat_widget .pusher-chat-widget {
   /* override for purposes of demo */
-  position: relative !important;
+  /*position: relative !important;*/
   bottom: auto !important;
   right: auto !important;
 

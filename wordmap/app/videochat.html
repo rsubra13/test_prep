@@ -3,26 +3,32 @@
 <title>
 </title>
 <script type="text/javascript">
-function start_chat()
+function start_videochat()
 {
-document.getElementById('iframe').innerHTML = "<iframe src='/webtester5/wordmap/video_chat.html' style='width:300px;height:300px'></iframe>";
+document.getElementById('iframe').innerHTML = "<iframe src='/test_prep/wordmap/app/video_chat.html' style='width:300px;height:300px;position:relative' frameborder='0'></iframe>";
 document.getElementById('stop').innerHTML = "<a href='javascript:end_chat()' class='orangebutton1' >End Video Chat</a>";
 }
 
 function end_chat()
 {
 document.getElementById('iframe').innerHTML = "";
+document.getElementById('stop').innerHTML = "";
+}
+function start_chat()
+{
+document.getElementById('hidechat').style.visibility = 'hidden';
+document.getElementById('chat').innerHTML = "<iframe src='http://localhost/test_prep/chat_quiz/chat/src/chat.html' style='overflow:visible; width:400px; height:600px;' frameborder='0' scrolling='yes' marginheight='0' marginwidth='0'></iframe>";
 }
 </script>
 <style type="text/css">
 .orangebutton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
-	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
-	background-color:#ffc477;
+	-moz-box-shadow:inset 0px 1px 0px 0px #1F8CFF;
+	-webkit-box-shadow:inset 0px 1px 0px 0px ##62AEFF;
+	box-shadow:inset 0px 1px 0px 0px ##62AEFF;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5EABFF), color-stop(1, #1F8CFF) );
+	background:-moz-linear-gradient( center top, #5EABFF 5%, #1F8CFF 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5EABFF', endColorstr='#1F8CFF');
+	background-color:#62AEFF;
 	-webkit-border-top-left-radius:20px;
 	-moz-border-radius-topleft:20px;
 	border-top-left-radius:20px;
@@ -36,7 +42,7 @@ document.getElementById('iframe').innerHTML = "";
 	-moz-border-radius-bottomleft:20px;
 	border-bottom-left-radius:20px;
 	text-indent:0;
-	border:1px solid #eeb44f;
+	border:1px solid #1F8CFF;
 	display:inline-block;
 	color:#ffffff;
 	font-family:Arial;
@@ -48,13 +54,13 @@ document.getElementById('iframe').innerHTML = "";
 	width:90px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #cc9f52;
+	text-shadow:1px 1px 0px #1F8CFF;
 }
 .orangebutton:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
-	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
-	background-color:#fb9e25;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #1F8CFF) );
+	background:-moz-linear-gradient( center top, #5EABFF 5%, #1F8CFF 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#1F8CFF');
+	background-color:#1F8CFF;
 }.orangebutton:active {
 	position:relative;
 	top:1px;
@@ -63,10 +69,10 @@ document.getElementById('iframe').innerHTML = "";
 	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 	box-shadow:inset 0px 1px 0px 0px #fce2c1;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
-	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
-	background-color:#ffc477;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5EABFF), color-stop(1, #1F8CFF) );
+	background:-moz-linear-gradient( center top, #5EABFF 5%, #1F8CFF 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5EABFF', endColorstr='#1F8CFF');
+	background-color:#5EABFF;
 	-webkit-border-top-left-radius:20px;
 	-moz-border-radius-topleft:20px;
 	border-top-left-radius:20px;
@@ -80,7 +86,7 @@ document.getElementById('iframe').innerHTML = "";
 	-moz-border-radius-bottomleft:20px;
 	border-bottom-left-radius:20px;
 	text-indent:0;
-	border:1px solid #eeb44f;
+	border:1px solid #1F8CFF;
 	display:inline-block;
 	color:#ffffff;
 	font-family:Arial;
@@ -95,10 +101,10 @@ document.getElementById('iframe').innerHTML = "";
 	text-shadow:1px 1px 0px #cc9f52;
 }
 .orangebutton1:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
-	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
-	background-color:#fb9e25;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1F8CFF), color-stop(1, #5EABFF) );
+	background:-moz-linear-gradient( center top, #1F8CFF 5%, #5EABFF 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1F8CFF', endColorstr='#5EABFF');
+	background-color:#1F8CFF;
 }.orangebutton1:active {
 	position:relative;
 	top:1px;
@@ -106,26 +112,39 @@ document.getElementById('iframe').innerHTML = "";
 </style>
 </head>
 <body>
-<h3 style="font-family:Arial;background-color:#ffc477;text-align:center">Group Tools</h3>
+<h3 style="font-family:Arial;background-color:#1F8CFF;text-align:center">Group Tools</h3>
 <span id='iframe'></span>
 <br/>
 <br/>
-<div style="position:fixed;left:30px">
+<div style="position:relative;left:30px">
 	<table>
 		<tr>
 			<td>
-			<a href='javascript:start_chat()' class="orangebutton1" >Start Video Chat</a>
+			<a href='javascript:start_videochat()' class="orangebutton1" >Start Video Chat</a>
 			</td>
+
 			<td>
 			<span id='stop'></span>
 			</td>
 		</tr>
 	</table>
+
+
+	
 	<br/>
 	<a href="https://secure.join.me/download.aspx" class="orangebutton1">Start Meeting</a>
 	<br/>
 	<br/>
 	<a href="https://join.me/buildwordmap" class="orangebutton1" target="_new">Join Meeting</a>
+	<br/>
+	<br/>
+	<span id="chat"><span>
+	<a href="javascript:start_chat()" id="hidechat" class="orangebutton1">Enter Chat Room</a>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 </body>
 </html>	  
