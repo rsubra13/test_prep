@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-include "../includes/conn.php";
-include "../includes/includes.php";
-
-
-?>
 <html>
 <head>
 <title>GRE PREP</title>
@@ -76,7 +69,7 @@ include "../includes/includes.php";
       </div>
     </form>
     <!-- ENDS search -->
-      <!-- Navigation -->
+       <!-- Navigation -->
     <ul id="nav" class="sf-menu sf-vertical">
       <li class="current-menu-item"><a href="template.php">HOME</a></li>
       <li><a href="template.php">FREE EDUCATIONAL TRIP</a>
@@ -85,7 +78,7 @@ include "../includes/includes.php";
           <li><a href="features-tabs.html">Tabbed content</a>
         </ul>
       </li>
-      <li><a href="skins.html">MIND MAPS</a></li>
+      <li><a href="../userArea.php">COURSES</a></li>
       <li><a href="statistics.php">USER STATISTICS</a>
         <ul>
           <li><a href="gallery.html">Image gallery</a>
@@ -134,133 +127,130 @@ include "../includes/includes.php";
   <!-- MAIN -->
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
-   
+
+
+     <div id="main">
+    <!-- HEADER -->
+    <div id="header">
+      <div id="page-title">Last Year Contestant winners - Profile and Experiences</div>
+      <!-- Breadcrumb-->
+      <div id="breadcrumbs"> You are here: <a href="#">Home</a> &raquo; <a href="#">Blog</a> </div>
+      <!-- ENDS Breadcrumb-->
+    </div>
+    <!-- ENDS HEADER -->
     <!-- CONTENT -->
     <div id="content">
       <!-- PAGE CONTENT -->
       <div id="page-content">
-        <!-- feature blocks -->
-        <h1 class="header-line"><!-- ENDS feature blocks -->
-        <!-- TABS --></h1>
-        <form id="form1" name="form1" method="post">
+        <!-- Posts -->
+        <div class="post">
+          <h1><a href="template.php">Ronney - Arizona State University</a></h1> <strong style="color: #02C"> 
+          <!-- meta -->
+          <ul class="meta"> 
+            <li>By <a href="#">admin</a>&nbsp;</li>
+            <li> on Dec 1th 2013 &nbsp;</li>
+            <li> with 47 comments &nbsp;</li>
+            <li> in <a href="#">Blogs</a>&nbsp;</li>
+          </ul>
+          <!-- ENDS meta -->
+          <!-- feature image -->
+    <style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}
+.tftable tr {background-color:#e9dbbb;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}
+.tftable tr:hover {background-color:#ffffff;}
+</style>
+
+<table class="tftable" border="1">
+<tr><th><strong style="color: #02C">Queries</th><th><strong style="color: #02C">Answers</th></tr>
+<tr><td><strong style="color: #02C">What was your overall score on the actual GRE?
+</td><td><strong style="color: #90C">330</td></tr>
+<tr><td><strong style="color: #02C">What was your math score?
+</td><td><strong style="color: #90C">170</td></tr>
+<tr><td><strong style="color: #02C">What was your verbal score?
+</td><td><strong style="color: #90C">160</td></tr>
+<tr><td><strong style="color: #02C">what was your previous math score,while joining GRE PREP?  
+</td><td><strong style="color: #90C">161</td></tr>
+<tr><td><strong style="color: #02C">what was your previous verbal score?  
+</td><td><strong style="color: #90C">151</td></tr>
+<tr><td><strong style="color: #02C">How did Free Educational Trip help you? 
+</td><td><strong style="color: #90C">The lessons gave me a lot of good tips and helped me approach problems in a more methodical way. 
+The FREE Educational Trip and the ability to track my progress provided a great motivation to study, something I lacked the last time around.
+I visited my Dream University and had a chat with Seniors and Professors.  
+</td></tr>
+
+</table>
+
+
+          <p> <strong style="color: #09C">
          
-          <p><strong style="color: #82C">Here are some of the stellar performers, whom we have handpicked for you!   <p>&nbsp;</p>
-         
-        <strong style="color: #67C"> These are they stellar performers of last year(s) contest, went to their dream Universities for a one day field trip! 
-          </p>  
-
-       
-
-          <?php
+          <!-- ENDS feature image -->
+          <div class="the-excerpt">  
 
 
-          $uid=$_SESSION['userID'];
-          $uname=$_SESSION['username'];
-          #echo "uname " , $uname;
-          #echo "uid " , $uid;
-          
 
-           $sessionsql = "SELECT users.Username,users.stream,users.gre_range
-                          FROM users 
-                          inner join sessions
-                          on users.ID = $uid
-                          group by users.ID";
-          
-          $result=mysql_query($sessionsql, $conn);
-          #echo "result:",$result;
-          
+          </div>
+         </div>
+        <div class="post">
+          <h1><a href="template.php">Jack- University of Texas at Dallas</a></h1>
+          <!-- meta -->
+         <ul class="meta"> 
+            <li>By <a href="#">admin</a>&nbsp;</li>
+            <li> on Dec 1th 2013 &nbsp;</li>
+            <li> with 53 comments &nbsp;</li>
+            <li> in <a href="#">Blogs</a>&nbsp;</li>
+          </ul> -->
 
 
-          if($result === FALSE) 
-          {
-            die(mysql_error()); // TODO: better error handling
-          }
-                     
-
-                     while($row = mysql_fetch_array($result))
-                    {
-                    
-                    
-                     $u_gre=$row['gre_range'];                   
-                     $u_stream=$row['stream'];
-                     
-                     
-                     
-                   
-                     } 
-
-           echo '</table>';         
+          <!-- feature image -->
+         <style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}
+.tftable tr {background-color:#e9dbbb;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}
+.tftable tr:hover {background-color:#ffffff;}
+</style>
 
 
-         echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                        <th width="10%">NAME</th>
-                        <th width="25%">UNIV_NAME</th>
-                        <th width="25%">WEBSITE</th>
-                        </tr>';
-
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
-          
-
-           $strsql = "SELECT stellar_performers.PERSON_NAME,stellar_performers.STREAM,stellar_performers.UNIV_NAME,stellar_performers.WEBSITE,stellar_performers.GRE_RANGE
-                          FROM stellar_performers 
-                          left join users
-                          on stellar_performers.GRE_RANGE = $u_gre
-                          group by stellar_performers.UNIV_NAME";
-
-
-          $result=mysql_query($strsql, $conn);
-
-          if($result === FALSE) 
-          {
-            die(mysql_error()); // TODO: better error handling
-          }
-          
-                    while($row = mysql_fetch_array($result))
-                    {
-                      echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-
-                      echo '<td><center><strong style="color: #02C"> '.$row['UNIV_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['WEBSITE'].'</center></td>';
-                      echo '</tr>'; 
-                   
-                    } 
-
-          echo '</table>';  
- 
-          ?>
-
-
-          <label ><strong style="color: #02C">If you wanna know about them and their experiences, Click below.....</label> <p>
-        
-    <a href="blog.php"><img src="images/nivo-arrows.png"  alt="" width="77" height="70" class="blocks-gallery" id="image"/></a>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;</th>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-          </table>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-         
-        </form>
-          
-      </div>
-        <!-- ENDS TABS -->
+<table class="tftable" border="1">
+<tr><th><strong style="color: #02C">Queries</th><th><strong style="color: #02C">Answers</th></tr>
+<tr><td><strong style="color: #02C">What was your overall score on the actual GRE?
+</td><td><strong style="color: #90C">324</td></tr>
+<tr><td><strong style="color: #02C">What was your math score?
+</td><td><strong style="color: #90C">164</td></tr>
+<tr><td><strong style="color: #02C">What was your verbal score?
+</td><td><strong style="color: #90C">160</td></tr>
+<tr><td><strong style="color: #02C">what was your previous math score,while joining GRE PREP?  
+</td><td><strong style="color: #90C">154</td></tr>
+<tr><td><strong style="color: #02C">what was your previous verbal score?  
+</td><td><strong style="color: #90C">148</td></tr>
+<tr><td><strong style="color: #02C">How did Free Educational Trip help you? 
+</td><td><strong style="color: #90C"> 
+The FREE Educational Trip and the ability to track my progress provided a great motivation to study, something I lacked the last time around.
+I visited my Dream University and discussed about my research interest in the Machine Learning Area. 
+</td></tr>
+</table> </div>
+        <!-- ENDS posts -->
+        <!-- Pagination -->
+        <ul class='pager'>
+          <li class="first-child"><a href="#">prev</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="last-child"><a href="#">next</a></li>
+        </ul>
+        <!-- ENDS Pagination -->
       </div>
       <!-- ENDS PAGE-CONTENT -->
     </div>
     <!-- ENDS CONTENT -->
+  </div>
+  <!-- ENDS MAIN -->
+   
+    <!-- CONTENT --><!-- ENDS CONTENT -->
   </div>
   <!-- ENDS MAIN -->
 </div>
@@ -299,4 +289,3 @@ include "../includes/includes.php";
 <!-- ENDS FOOTER -->
 </body>
 </html>
-

@@ -29,7 +29,7 @@ if (in_array($mode, array('login', 'logout', 'confirm', 'sendpassword', 'activat
 $u = $user->session_begin();
 echo $u;
 $a=$auth->acl($user->data);
-$user->setup('ucp');
+$user->setup('ucp');  
 // Setting a variable to let the style designer know where he is...
 $template->assign_var('S_IN_UCP', true);
 
@@ -163,23 +163,29 @@ $template->assign_var('S_IN_UCP', true);
   <div align="center" id="main">
     <div class="home-quotes">Painless GRE Preperation... Learn, Interact, Score!</div>
 
+       <label ><strong style="color: #09C">User Statistics</label> <p>
 
 
           <?php
           echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
                 <th width="20%">User Name</th>
-                <th width="10%">Posts Count </th>
+                <th width="10%">Posts Contributed </th>
+                <th width="10%">Marks increase %</th>
                 <th width="15%">User Rank </th>
                 </tr>';
 
-          $sql = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.`username` = 'ramki' LIMIT 1";
+          #$sql = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.`username` = 'ramki' LIMIT 1";
+          
+          $sql = "SELECT * FROM `phpbb_users` WHERE 1 LIMIT 0, 30 ";   
           $result=mysql_query($sql, $conn);
-          $u= $user->data['user_id'];
-          echo $u;
+          $user->data['user_id'];
+                    
                     while($row = mysql_fetch_array($result))
                     {
+
                       echo '<td><center><strong style="color: #02C">'.$row['username'].'</center></td>';
                       echo '<td><center><strong style="color: #02C">'.$row['user_posts'].'</center></td>'; 
+                      echo '<td><center><strong style="color: #02C">'.$row['user_jabber'].'</center></td>';
                       echo '<td><center><strong style="color: #02C">'.$row['user_rank'].'</center></td>';
                 
                       echo '</tr>'; 
@@ -189,11 +195,15 @@ $template->assign_var('S_IN_UCP', true);
           echo '</table>'; 
           $uname = "SELECT * FROM `phpbb_users` WHERE `phpbb_users`.`user_id` = 'ramki' LIMIT 1";
           $posts = "SELECT * FROM `phpbb_posts` where `poster_id`= 48 LIMIT 0, 30 ";  
-            
+
 
 
           ?>
 
+
+    <label ><strong style="color: #07C">Keep trying   !! "Arise, Awake and stop not till the Goal is reached"</label> <p>
+        
+    <a href="index.php"><img src="images/mission.jpg"  alt="" width="77" height="70" class="blocks-gallery" id="image"/></a>       
     <!-- CONTENT --><!-- ENDS CONTENT -->
   </div>
   <!-- ENDS MAIN -->
