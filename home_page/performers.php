@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+<?php
+
+include "../includes/conn.php";
+include "../includes/includes.php";
 
 
-
-
+?>
 <html>
 <head>
 <title>GRE PREP</title>
@@ -140,76 +143,54 @@
         <h1 class="header-line"><!-- ENDS feature blocks -->
         <!-- TABS --></h1>
         <form id="form1" name="form1" method="post">
-          <p>Welcome User ! </p>
-          <p>Your intended Major is : </p>
-          <table width="200" border="1" summary="These are they stellar performers of last years contest, went to their dream Universities for a field trip of one day. ">
-            <caption>
-              Stellar Performers of Your Major
-            </caption>
-            <?php
-          error_reporting(E_ALL);
-          ini_set('display_errors', TRUE);
-          ini_set('display_startup_errors', TRUE);
+         
+          <p><strong style="color: #82C">Here are some of the stellar performers, whom we have handpicked for you!   <p>&nbsp;</p>
+         
+        <strong style="color: #67C"> These are they stellar performers of last year(s) contest, went to their dream Universities for a one day field trip! 
+          </p>  
 
-        include "../includes/conn.php";
-        include "../includes/includes.php";
+       
+
+          <?php
+
+         echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
+                        <th width="10%">NAME</th>
+                        <th width="25%">STREAM</th>
+                        <th width="25%">UNIV_NAME</th>
+                        <th width="25%">WEBSITE</th>
+                        </tr>';
+
+          #$strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
+          
+
+           $strsql = "SELECT stellar_performers.PERSON_NAME,stellar_performers.STREAM,stellar_performers.UNIV_NAME,stellar_performers.WEBSITE,stellar_performers.GRE_RANGE
+                          FROM stellar_performers 
+                          inner join users
+                          on users.gre_range = stellar_performers.GRE_RANGE
+                          group by stellar_performers.GRE_RANGE";
 
 
- echo '<table border="1" style="text-align:center;" cellpadding="0" cellspacing="3"><tr>
-                <th width="10%">ID</th>
-                <th width="25%">NAME</th>
-                <th width="25%">UNIV_NAME</th>
-                <th width="25%">UNIQUE_ID</th>
-                </tr>';
-
-          #$strsql = "SELECT * FROM `stellar_performers` WHERE (`stellar_performers`.`BREADTH_AREA` = \'03\') OR (`stellar_performers`.`GRE_RANGE` = \'02\')";
-          $strsql = "SELECT * FROM `stellar_performers` WHERE 1 LIMIT 0, 30 ";
           $result=mysql_query($strsql, $conn);
+
+          if($result === FALSE) 
+          {
+            die(mysql_error()); // TODO: better error handling
+          }
           
                     while($row = mysql_fetch_array($result))
                     {
                       echo '<tr class="select">';
-                      echo '<td><center><strong style="color: #02C"> '.$row['PERSON_ID'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>'; 
                       echo '<td><center><strong style="color: #02C"> '.$row['PERSON_NAME'].'</center></td>';
-                      echo '<td><center> <strong style="color: #02C"> '.$row['INPUT_ID'].'</center></td>';
+                      echo '<td><center> <strong style="color: #02C"> '.$row['STREAM'].'</center></td>'; 
+                      echo '<td><center><strong style="color: #02C"> '.$row['UNIV_NAME'].'</center></td>';
+                      echo '<td><center> <strong style="color: #02C"> '.$row['WEBSITE'].'</center></td>';
                       echo '</tr>'; 
-                    $counter++; 
+                   
                     } 
 
           echo '</table>';  
  
-$strsql = "SELECT * FROM `stellar_performers` ";
-$result=mysql_query($strsql, $conn);
-#echo $result;
-
-
-#if($result){
- # $data = mysql_fetch_array($result);
- # print_r($data);
-  #echo $data['UNIV_NAME'];
-#}
-
-echo "<table border='1'>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-</tr>";
-
-
-while($row = mysqli_fetch_array($result))
-{
-	echo "<tr>";
-	echo "<td>" . $row['PERSON_NAME'] . "</td>";
-	echo "<td>" . $row['UNIV_NAME'] . "</td>";
-	echo "</tr>";
-}
-echo "</table>";
-
-mysqli_close($con);
-
-
-?>
+          ?>
             <tr>
               <th scope="row">&nbsp;</th>
               <td>&nbsp;</td>
@@ -228,11 +209,7 @@ mysqli_close($con);
           </table>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
+         
         </form>
           
       </div>

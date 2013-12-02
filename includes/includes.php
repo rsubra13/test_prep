@@ -46,6 +46,7 @@ if (getenv("HTTP_X_FORWARDED_FOR")) {
 } else { 
     $ip = getenv("REMOTE_ADDR");
 }
+
 session_start();
 $sessID = $_COOKIE['sessID'];
 // $sessID = $_SESSION['ID'];

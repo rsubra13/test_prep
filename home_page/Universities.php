@@ -205,10 +205,17 @@ echo '<p><strong style="color: #02C"> As per our records, you have provided thes
 
 
 
-             $univsql = "SELECT UNIV_NAME,WEBSITE
-                          FROM stellar_performers";
+            # $univsql = "SELECT 
+             #             FROM stellar_performers";
           
-          $result=mysql_query($univsql, $conn);
+
+            $strsql = "SELECT stellar_performers.UNIV_NAME,stellar_performers.WEBSITE
+                          FROM `stellar_performers`
+                          inner join users
+                          on users.gre_range = stellar_performers.GRE_RANGE
+                          group by stellar_performers.GRE_RANGE";
+
+          $result=mysql_query($strsql, $conn);
           #echo "result:",$result;
           
 

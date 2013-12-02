@@ -157,7 +157,7 @@
 
               <li > 
               <strong style="color: #80C"> 
-              To get a bird's eye view of the ongoing Researdh in your dream Universities?  
+              To get a bird's eye view of the ongoing Research in your dream Universities?  
 
               </ul>
 
