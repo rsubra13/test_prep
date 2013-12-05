@@ -62,7 +62,7 @@ h2
 		text-decoration: none;  
         color: #1D1D1D; 
 		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1))); 
-        
+        position:relative;
 }
  h2:after {  
         color: #1D1D1D;  
@@ -75,6 +75,7 @@ h3{
   letter-spacing: 0.1em;
   color: rgb(142,11,0);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+  position:relative
 }
 
 </style>
