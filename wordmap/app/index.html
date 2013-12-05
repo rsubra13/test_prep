@@ -194,6 +194,10 @@ function breakout_of_frame()
     top.location.href = "http://localhost/test_prep/home_page/courses.php";
 	}
 }
+function save()
+{
+	document.getElementById('done').submit();
+}
 </script>
 </head>
 <body>
@@ -240,7 +244,7 @@ function breakout_of_frame()
       		</span>
       		<span class="ui-buttonset">
       		<button id="button-COPY_COMMAND" class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-primary" role="button" aria-disabled="false">
-					<span class="ui-button-text"><a href="javascript:submit()">Submit</a></span>
+					<span class="ui-button-text"><a id='submit' href="javascript:save()">Submit</a></span>
 			</button>
       		</span> 		
       	</span>

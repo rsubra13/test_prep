@@ -106,7 +106,7 @@ $(document).ready(function() {
           </span>
           <select name="select2" required="required" id="select2" tabindex="1" title="subject area">
             <option value="320 and above">320 and above</option>
-            <option value="310-320">310-320</option>
+            <option value="311 -320">311 -320</option>
             <option value="300-310">300-310</option>
             <option value="290-299">290-299</option>
             <option value="280-289">280-289</option>

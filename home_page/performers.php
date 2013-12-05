@@ -204,8 +204,8 @@ include "../includes/includes.php";
            $strsql = "SELECT stellar_performers.PERSON_NAME,stellar_performers.STREAM,stellar_performers.UNIV_NAME,stellar_performers.WEBSITE,stellar_performers.GRE_RANGE
                           FROM stellar_performers 
                           left join users
-                          on stellar_performers.GRE_RANGE = $u_gre
-                          group by stellar_performers.UNIV_NAME";
+                          on stellar_performers.GRE_RANGE ='".$u_gre.
+                          "' group by stellar_performers.UNIV_NAME";
 
 
           $result=mysql_query($strsql, $conn);

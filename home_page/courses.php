@@ -133,7 +133,7 @@
 	<h2 style='color:#666'>&nbsp;&nbsp;&nbsp;&nbsp;GRE Courses</h2>
 	<br />
     <!-- Slider -->
-		<iframe src="../userArea.php" style="width:1100px;height:1000px"></iframe>
+		<iframe src="../userArea.php" style="width:1100px;height:1200px;position:relative"></iframe>
 	
  </div>
   <!-- ENDS MAIN -->

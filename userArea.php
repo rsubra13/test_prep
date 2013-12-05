@@ -1,4 +1,6 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 <?php
+error_reporting(0);
 include "./includes/timerhead.php";
 include "./includes/conn.php";
 include "./includes/includes.php";
@@ -13,10 +15,11 @@ $username=$_SESSION['loggedInName'];
 $password=$_SESSION['password'];
 
 ?>
+<!DOCTYPE html>
 <html><!-- InstanceBegin template="/Templates/Test Layout.dwt.php" codeOutsideHTMLIsLocked="false" -->
 
 <head>
-<link href="includes/wtstyle.css" rel="stylesheet"  type="text/css">
+<link href="./includes/wtstyle.css" rel="stylesheet"  type="text/css">
 <?
 // Copyright (C) 2003 - 2007 Eppler Software.  All rights reserved.
 // Any redistribution or reproduction of any materials herein is strictly prohibited.
@@ -25,6 +28,7 @@ $password=$_SESSION['password'];
 <title>Welcome to test prep</title>
 <!-- InstanceEndEditable --> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> 
 <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 <style type="text/css">
 input.next
@@ -48,6 +52,29 @@ body {display:none}
 <?php
 }
 ?>
+}
+
+h2
+{ 
+        font-size: 40px;  
+        margin-top: 0;  
+        font-family: 'Lobster', helvetica, arial; 
+		text-decoration: none;  
+        color: #1D1D1D; 
+		-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(50%, rgba(0,0,0,.5)), to(rgba(0,0,0,1))); 
+        
+}
+ h2:after {  
+        color: #1D1D1D;  
+        text-shadow: 0 1px 0 white;  
+    }
+	
+h3{
+  font-size: 2em;
+  font-family: Georgia;
+  letter-spacing: 0.1em;
+  color: rgb(142,11,0);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
 }
 
 </style>
@@ -127,11 +154,12 @@ include "./includes/top.php";
 	<div style="background:#E9E9E9">
 	<tr style="background:#E9E9E9">
 	<td>
-	<p style='background:#E9E9E9;color:#880101'><strong>Available Lectures for <?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></strong></p>
+	<h3 style='background:#E9E9E9'><strong>Available Lectures for <?=$_SESSION['firstname']?> <?=$_SESSION['lastname']?></strong></h3>
 	</td>
 	</tr>
 	<tr style="background:#E9E9E9;align:center">
-	<td><p class="style1"><strong>Presentations</strong></p></td>
+	<td><h2>Presentations</h2></td>
+	<td><?=$id?></td>
 	<tr>
 	<tr>
 	<td style="background:#E9E9E9">
@@ -140,7 +168,7 @@ include "./includes/top.php";
 	<td>
 	</tr>
 	<tr style="background:#E9E9E9;align:center">
-	<td><br/><p class="style1"><strong>Video Lectures</strong></p></td>
+	<td><br/><h2>Video Lectures</h2></td>
 	</tr>
 	<tr>
 	<td style="background:#E9E9E9">
@@ -168,7 +196,19 @@ include "./includes/top.php";
 	  } else {
 	  	$num_rows=0;
 	  }
-	  ?>
+	  
+	  
+	  $strActivitySQL = "SELECT * FROM activity WHERE username='".$_SESSION['firstname']."'";
+	  $activityResult=mysql_query($strActivitySQL, $conn);
+	  if($activityResult)
+	  {
+		 $act_rows = mysql_num_rows($activityResult);
+	  }
+	  else
+	  {
+		die('Unable to retrieve data');
+	  }
+	 ?>
 	  <script language="javascript" type="text/javascript" src="includes/tableH.js"></script>
         <!-- <table width="100%"  border="0" cellspacing="2" cellpadding="0">
           <tr bgcolor="#EBEBEB">
@@ -180,23 +220,31 @@ include "./includes/top.php";
 		<table class="style1 style5" width="100%"  border="0" cellspacing="2" cellpadding="0" onMouseOut="javascript:highlightTableRowVersionA(0);">
 		<tr bgcolor="#C8D8FF">
 			<td><strong>Activity</strong></td>
-			<td width="240"><strong>Activity Description</strong></td>
+			<td><strong>Activity Description</strong></td>
+			<td width="200px"><strong>Status</strong></td>
 		</tr>
+		<?php
+		 if ($act_rows != 0) {
+				while($a_row = mysql_fetch_assoc($activityResult)) {
+				$i++;
+
+	  ?>
 		<tr class="d0">
-			<td>Collaboratively build a WordMap for <strong><a href="javascript:breakout_of_frame()">Abate</a></strong><br/>Activity due <strong>Dec 10</strong></td>
-			<td>As a group, build a WordMap for <b>Abate</b>. <br/>One member in the group will serve as a facilitator for this activity</td>
-		</tr>
-		<tr class="d1">
-			<td>Collaboratively build Wiki pages for the words you added in <strong><a href="javascript:breakout_of_frame1()">your WordMap</a></strong><br/>Activity due <strong>Dec 20</strong></td>
-			<td>Open the WordMap from your Google Drive/Dropbox. Click on each word to edit the Wiki. <br/>If the Wiki is blank, then create one. <br/>If the Wiki has contents in it, think and add/modify the existing content to improve the Wiki's content quality</td>
+			<td><?=$a_row['activity_name']?></td>
+			<td><?=$a_row['activity_desc']?></td>
+			<td><?=$a_row['status']?></td>
 		</tr>
 	</tr>
+	 <?php
+		}
+	}
+  ?>
 		<table class="style1 style5" width="100%"  border="0" cellspacing="2" cellpadding="0" onMouseOut="javascript:highlightTableRowVersionA(0);">
 		<tr bgcolor="#C8D8FF">
 	<br>
 	<br>
-    <td>Name</td>
-    <td width="240">Subject</td>
+    <td><strong>Name</strong></td>
+    <td width="240"><strong>Subject</strong></td>
   </tr>
   <?php
 			if ($num_rows != 0) {
